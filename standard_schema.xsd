@@ -1,0 +1,4963 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="https://shab.ch/kabso/BU-SO25-import" targetNamespace="https://shab.ch/kabso/BU-SO25-import" version="1.21">
+<xs:element type="publicationType" name="publication"/>
+<xs:complexType name="contentType">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="controls">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:boolean" minOccurs="0" name="translation">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Meldung mit Übersetzung</en>
+<de>Meldung mit Übersetzung</de>
+<fr>Publication avec traduction</fr>
+<it>Meldung mit Übersetzung</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:boolean" minOccurs="0" name="apiImport">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Meldung über API importiert</en>
+<de>Meldung über API importiert</de>
+<fr>Publication avec traduction</fr>
+<it>Meldung über API importiert</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:boolean" minOccurs="0" name="showLegalComponent">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Rechtlicher Hinweis-Block</en>
+<de>Rechtlicher Hinweis-Block</de>
+<fr>Rechtlicher Hinweis-Block</fr>
+<it>Rechtlicher Hinweis-Block</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:boolean" minOccurs="0" name="excludeDisplayTitleAPI">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Titel ausblenden über API</en>
+<de>Titel ausblenden über API</de>
+<fr>Titel ausblenden über API</fr>
+<it>Titel ausblenden über API</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="regOfficeSignature">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="img">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="action">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="key">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="term">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="businessCase">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="key">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="term">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Angepasste Bezeichnung des Geschäftsfalls</en>
+<de>Angepasste Bezeichnung des Geschäftsfalls</de>
+<fr>Désignation adaptée de la catégorie </fr>
+<it>Angepasste Bezeichnung des Geschäftsfalls</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Angepasste Bezeichnung des Geschäftsfalls (Übersetzung)</en>
+<de>Angepasste Bezeichnung des Geschäftsfalls (Übersetzung)</de>
+<fr>Désignation adaptée de la catégorie (traduction)</fr>
+<it>Angepasste Bezeichnung des Geschäftsfalls (Übersetzung)</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:boolean" minOccurs="0" name="customTerm">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Bezeichnung des Geschäftsfalls anpassen</en>
+<de>Bezeichnung des Geschäftsfalls anpassen</de>
+<fr>Adapter la désignation de la catégorie</fr>
+<it>Bezeichnung des Geschäftsfalls anpassen</it>
+</label>
+<description>
+<en>Mit dieser Option können Sie den allgemeinen Begriff präzisieren. Auf Ihrer Meldung wird dann die angepasste Bezeichnung ausgegeben.</en>
+<de>Mit dieser Option können Sie den allgemeinen Begriff präzisieren. Auf Ihrer Meldung wird dann die angepasste Bezeichnung ausgegeben.</de>
+<fr>Cette option vous permet de préciser la déscription générale. La description adaptée sera alors publiée sur votre publication.</fr>
+<it>Mit dieser Option können Sie den allgemeinen Begriff präzisieren. Auf Ihrer Meldung wird dann die angepasste Bezeichnung ausgegeben.</it>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="1" maxOccurs="unbounded" name="primary">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="element">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="titleStringObject">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Label</en>
+<de>Label</de>
+<fr>Label</fr>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Label</en>
+<de>Label</de>
+<fr>Label</fr>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="key">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="valueType">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="term">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Angepasster Titel des Hauptelements</en>
+<de>Angepasster Titel des Hauptelements</de>
+<fr>Titre adapté de l'élément principal</fr>
+<it>Angepasster Titel des Hauptelements</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Angepasster Titel des Hauptelements (Übersetzung)</en>
+<de>Angepasster Titel des Hauptelements (Übersetzung)</de>
+<fr>Titre adapté de l'élément principal (traduction)</fr>
+<it>Angepasster Titel des Hauptelements (Übersetzung)</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:boolean" minOccurs="0" name="customTerm">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Bezeichnung des Hauptelements anpassen</en>
+<de>Bezeichnung des Hauptelements anpassen</de>
+<fr>Adapter le texte de l'élément principal</fr>
+<it>Bezeichnung des Hauptelements anpassen</it>
+</label>
+<description>
+<en>Mit dieser Option können Sie den allgemeinen Begriff präzisieren. Auf Ihrer Meldung wird dann die angepasste Bezeichnung ausgegeben.</en>
+<de>Mit dieser Option können Sie den allgemeinen Begriff präzisieren. Auf Ihrer Meldung wird dann die angepasste Bezeichnung ausgegeben.</de>
+<fr>Cette option vous permet de préciser la déscription générale. La description adaptée sera alors publiée sur votre publication.</fr>
+<it>Mit dieser Option können Sie den allgemeinen Begriff präzisieren. Auf Ihrer Meldung wird dann die angepasste Bezeichnung ausgegeben.</it>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="valueText">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="term">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Text eingeben</en>
+<de>Text eingeben</de>
+<fr>Saisir le texte</fr>
+<it>Text eingeben</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Text eingeben (Übersetzung)</en>
+<de>Text eingeben (Übersetzung)</de>
+<fr>Saisir le texte (Traduction)</fr>
+<it>Text eingeben (Übersetzung)</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="address">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="addressLine1">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>c/o</en>
+<de>Adresszusatz (z.B. "c/o" oder "Lokalität")</de>
+<fr>Complément d'adresse (par ex. "c/o" ou "localité")</fr>
+<it>c/o</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="street">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Street</en>
+<de>Strasse</de>
+<fr>Rue</fr>
+<it>Via</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="houseNumber">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Nr.</en>
+<de>Nr.</de>
+<fr>No.</fr>
+<it>Nr.</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="swissZipCode">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>PLZ</en>
+<de>PLZ</de>
+<fr>NPA</fr>
+<it>PLZ</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="town">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Town</en>
+<de>Ort</de>
+<fr>Lieu</fr>
+<it>Luogo</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="subject">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="selectType">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="naturalPerson"/>
+<xs:enumeration value="legalPerson"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="legalPerson">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:boolean" minOccurs="0" name="noUID">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Organisation not listed on the UID register or in the process of foundation</en>
+<de>Organisation ohne UID-Eintrag oder in Gründung</de>
+<fr>Organisation sans inscription IDE ou en cours de fondation</fr>
+<it>Organizzazione non iscritta nel registro IDI o in fase di costituzione</it>
+</label>
+<description>
+<en>Please only select this option if you are unable to find the organisation you are looking for (e.g. a specific authority, a foreign firm or an association that is not listed on the UID register.</en>
+<de>Bitte wählen Sie diese Option nur, wenn Sie die Organisation nicht über die Organisationssuche finden können (beispielsweise eine spezifische Behörde, eine ausländische Firma oder einen nicht im UID-Register geführten Verein).</de>
+<fr>Choisissez cette option uniquement si vous ne parvenez pas à trouver l'organisation par la fonction de recherche d'organisation (p. ex. une autorité spécifique, une entreprise étrangère ou une association non inscrite au registre IDE).</fr>
+<it>Scegli questa opzione soltanto se non sei riuscito a trovare la tua organizzazione (p. es. una specifica autorità, una azienda straniera o un'associazione non presente nel registro IDI).</it>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="company">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="name">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Name</en>
+<de>Name</de>
+<fr>Nom</fr>
+<it>Nome</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="customAddress">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Adresse</en>
+<de>Adresse</de>
+<fr>Adresse</fr>
+<it>Adresse</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" name="country">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Country</en>
+<de>Staat</de>
+<fr>État</fr>
+<it>Paese</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:complexType>
+<xs:all>
+<xs:element name="isoCode">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="AD"/>
+<xs:enumeration value="AE"/>
+<xs:enumeration value="AF"/>
+<xs:enumeration value="AG"/>
+<xs:enumeration value="AI"/>
+<xs:enumeration value="AL"/>
+<xs:enumeration value="AM"/>
+<xs:enumeration value="AN"/>
+<xs:enumeration value="AO"/>
+<xs:enumeration value="AQ"/>
+<xs:enumeration value="AR"/>
+<xs:enumeration value="AS"/>
+<xs:enumeration value="AT"/>
+<xs:enumeration value="AU"/>
+<xs:enumeration value="AW"/>
+<xs:enumeration value="AX"/>
+<xs:enumeration value="AZ"/>
+<xs:enumeration value="BA"/>
+<xs:enumeration value="BB"/>
+<xs:enumeration value="BD"/>
+<xs:enumeration value="BE"/>
+<xs:enumeration value="BF"/>
+<xs:enumeration value="BG"/>
+<xs:enumeration value="BH"/>
+<xs:enumeration value="BI"/>
+<xs:enumeration value="BJ"/>
+<xs:enumeration value="BL"/>
+<xs:enumeration value="BM"/>
+<xs:enumeration value="BN"/>
+<xs:enumeration value="BO"/>
+<xs:enumeration value="BQ"/>
+<xs:enumeration value="BR"/>
+<xs:enumeration value="BS"/>
+<xs:enumeration value="BT"/>
+<xs:enumeration value="BV"/>
+<xs:enumeration value="BW"/>
+<xs:enumeration value="BY"/>
+<xs:enumeration value="BZ"/>
+<xs:enumeration value="CA"/>
+<xs:enumeration value="CC"/>
+<xs:enumeration value="CD"/>
+<xs:enumeration value="CF"/>
+<xs:enumeration value="CG"/>
+<xs:enumeration value="CH"/>
+<xs:enumeration value="CI"/>
+<xs:enumeration value="CK"/>
+<xs:enumeration value="CL"/>
+<xs:enumeration value="CM"/>
+<xs:enumeration value="CN"/>
+<xs:enumeration value="CO"/>
+<xs:enumeration value="CR"/>
+<xs:enumeration value="CU"/>
+<xs:enumeration value="CV"/>
+<xs:enumeration value="CW"/>
+<xs:enumeration value="CX"/>
+<xs:enumeration value="CY"/>
+<xs:enumeration value="CZ"/>
+<xs:enumeration value="DE"/>
+<xs:enumeration value="DJ"/>
+<xs:enumeration value="DK"/>
+<xs:enumeration value="DM"/>
+<xs:enumeration value="DO"/>
+<xs:enumeration value="DZ"/>
+<xs:enumeration value="EC"/>
+<xs:enumeration value="EE"/>
+<xs:enumeration value="EG"/>
+<xs:enumeration value="EH"/>
+<xs:enumeration value="ER"/>
+<xs:enumeration value="ES"/>
+<xs:enumeration value="ET"/>
+<xs:enumeration value="FI"/>
+<xs:enumeration value="FJ"/>
+<xs:enumeration value="FK"/>
+<xs:enumeration value="FM"/>
+<xs:enumeration value="FO"/>
+<xs:enumeration value="FR"/>
+<xs:enumeration value="GA"/>
+<xs:enumeration value="GB"/>
+<xs:enumeration value="GD"/>
+<xs:enumeration value="GE"/>
+<xs:enumeration value="GF"/>
+<xs:enumeration value="GG"/>
+<xs:enumeration value="GH"/>
+<xs:enumeration value="GI"/>
+<xs:enumeration value="GL"/>
+<xs:enumeration value="GM"/>
+<xs:enumeration value="GN"/>
+<xs:enumeration value="GP"/>
+<xs:enumeration value="GQ"/>
+<xs:enumeration value="GR"/>
+<xs:enumeration value="GS"/>
+<xs:enumeration value="GT"/>
+<xs:enumeration value="GU"/>
+<xs:enumeration value="GW"/>
+<xs:enumeration value="GY"/>
+<xs:enumeration value="HK"/>
+<xs:enumeration value="HM"/>
+<xs:enumeration value="HN"/>
+<xs:enumeration value="HR"/>
+<xs:enumeration value="HT"/>
+<xs:enumeration value="HU"/>
+<xs:enumeration value="ID"/>
+<xs:enumeration value="IE"/>
+<xs:enumeration value="IL"/>
+<xs:enumeration value="IM"/>
+<xs:enumeration value="IN"/>
+<xs:enumeration value="IO"/>
+<xs:enumeration value="IQ"/>
+<xs:enumeration value="IR"/>
+<xs:enumeration value="IS"/>
+<xs:enumeration value="IT"/>
+<xs:enumeration value="JE"/>
+<xs:enumeration value="JM"/>
+<xs:enumeration value="JO"/>
+<xs:enumeration value="JP"/>
+<xs:enumeration value="KE"/>
+<xs:enumeration value="KG"/>
+<xs:enumeration value="KH"/>
+<xs:enumeration value="KI"/>
+<xs:enumeration value="KM"/>
+<xs:enumeration value="KN"/>
+<xs:enumeration value="KP"/>
+<xs:enumeration value="KR"/>
+<xs:enumeration value="KW"/>
+<xs:enumeration value="KY"/>
+<xs:enumeration value="KZ"/>
+<xs:enumeration value="LA"/>
+<xs:enumeration value="LB"/>
+<xs:enumeration value="LC"/>
+<xs:enumeration value="LI"/>
+<xs:enumeration value="LK"/>
+<xs:enumeration value="LR"/>
+<xs:enumeration value="LS"/>
+<xs:enumeration value="LT"/>
+<xs:enumeration value="LU"/>
+<xs:enumeration value="LV"/>
+<xs:enumeration value="LY"/>
+<xs:enumeration value="MA"/>
+<xs:enumeration value="MC"/>
+<xs:enumeration value="MD"/>
+<xs:enumeration value="ME"/>
+<xs:enumeration value="MF"/>
+<xs:enumeration value="MG"/>
+<xs:enumeration value="MH"/>
+<xs:enumeration value="MK"/>
+<xs:enumeration value="ML"/>
+<xs:enumeration value="MM"/>
+<xs:enumeration value="MN"/>
+<xs:enumeration value="MO"/>
+<xs:enumeration value="MP"/>
+<xs:enumeration value="MQ"/>
+<xs:enumeration value="MR"/>
+<xs:enumeration value="MS"/>
+<xs:enumeration value="MT"/>
+<xs:enumeration value="MU"/>
+<xs:enumeration value="MV"/>
+<xs:enumeration value="MW"/>
+<xs:enumeration value="MX"/>
+<xs:enumeration value="MY"/>
+<xs:enumeration value="MZ"/>
+<xs:enumeration value="NA"/>
+<xs:enumeration value="NC"/>
+<xs:enumeration value="NE"/>
+<xs:enumeration value="NF"/>
+<xs:enumeration value="NG"/>
+<xs:enumeration value="NI"/>
+<xs:enumeration value="NL"/>
+<xs:enumeration value="NO"/>
+<xs:enumeration value="NP"/>
+<xs:enumeration value="NR"/>
+<xs:enumeration value="NU"/>
+<xs:enumeration value="NZ"/>
+<xs:enumeration value="OM"/>
+<xs:enumeration value="PA"/>
+<xs:enumeration value="PE"/>
+<xs:enumeration value="PF"/>
+<xs:enumeration value="PG"/>
+<xs:enumeration value="PH"/>
+<xs:enumeration value="PK"/>
+<xs:enumeration value="PL"/>
+<xs:enumeration value="PM"/>
+<xs:enumeration value="PN"/>
+<xs:enumeration value="PR"/>
+<xs:enumeration value="PS"/>
+<xs:enumeration value="PT"/>
+<xs:enumeration value="PW"/>
+<xs:enumeration value="PY"/>
+<xs:enumeration value="QA"/>
+<xs:enumeration value="RE"/>
+<xs:enumeration value="RO"/>
+<xs:enumeration value="RS"/>
+<xs:enumeration value="RU"/>
+<xs:enumeration value="RW"/>
+<xs:enumeration value="SA"/>
+<xs:enumeration value="SB"/>
+<xs:enumeration value="SC"/>
+<xs:enumeration value="SD"/>
+<xs:enumeration value="SE"/>
+<xs:enumeration value="SG"/>
+<xs:enumeration value="SH"/>
+<xs:enumeration value="SI"/>
+<xs:enumeration value="SJ"/>
+<xs:enumeration value="SK"/>
+<xs:enumeration value="SL"/>
+<xs:enumeration value="SM"/>
+<xs:enumeration value="SN"/>
+<xs:enumeration value="SO"/>
+<xs:enumeration value="SR"/>
+<xs:enumeration value="SS"/>
+<xs:enumeration value="ST"/>
+<xs:enumeration value="SV"/>
+<xs:enumeration value="SX"/>
+<xs:enumeration value="SY"/>
+<xs:enumeration value="SZ"/>
+<xs:enumeration value="TC"/>
+<xs:enumeration value="TD"/>
+<xs:enumeration value="TF"/>
+<xs:enumeration value="TG"/>
+<xs:enumeration value="TH"/>
+<xs:enumeration value="TJ"/>
+<xs:enumeration value="TK"/>
+<xs:enumeration value="TL"/>
+<xs:enumeration value="TM"/>
+<xs:enumeration value="TN"/>
+<xs:enumeration value="TO"/>
+<xs:enumeration value="TR"/>
+<xs:enumeration value="TT"/>
+<xs:enumeration value="TV"/>
+<xs:enumeration value="TW"/>
+<xs:enumeration value="TZ"/>
+<xs:enumeration value="UA"/>
+<xs:enumeration value="UG"/>
+<xs:enumeration value="UM"/>
+<xs:enumeration value="US"/>
+<xs:enumeration value="UY"/>
+<xs:enumeration value="UZ"/>
+<xs:enumeration value="VA"/>
+<xs:enumeration value="VC"/>
+<xs:enumeration value="VE"/>
+<xs:enumeration value="VG"/>
+<xs:enumeration value="VI"/>
+<xs:enumeration value="VN"/>
+<xs:enumeration value="VU"/>
+<xs:enumeration value="WF"/>
+<xs:enumeration value="WS"/>
+<xs:enumeration value="XK"/>
+<xs:enumeration value="YE"/>
+<xs:enumeration value="YT"/>
+<xs:enumeration value="ZA"/>
+<xs:enumeration value="ZM"/>
+<xs:enumeration value="ZW"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:all>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="uid">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>UID</en>
+<de>UID</de>
+<fr>UID</fr>
+<it>UID</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="uidOrganisationId">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>UID-OrganisationID</en>
+<de>UID-OrganisationID</de>
+<fr>UID-OrganisationID</fr>
+<it>UID-OrganisationID</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" name="uidOrganisationIdCategorie">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>UID-OrganisationIdCategorie</en>
+<de>UID-OrganisationIdCategorie</de>
+<fr>UID-OrganisationIdCategorie</fr>
+<it>UID-OrganisationIdCategorie</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="CHE"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element minOccurs="0" name="legalForm">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Legal form</en>
+<de>Rechtsform</de>
+<fr>Forme juridique</fr>
+<it>Forma giuridica</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="0101"/>
+<xs:enumeration value="0103"/>
+<xs:enumeration value="0104"/>
+<xs:enumeration value="0105"/>
+<xs:enumeration value="0106"/>
+<xs:enumeration value="0107"/>
+<xs:enumeration value="0108"/>
+<xs:enumeration value="0109"/>
+<xs:enumeration value="0110"/>
+<xs:enumeration value="0111"/>
+<xs:enumeration value="0113"/>
+<xs:enumeration value="0114"/>
+<xs:enumeration value="0115"/>
+<xs:enumeration value="0116"/>
+<xs:enumeration value="0117"/>
+<xs:enumeration value="0118"/>
+<xs:enumeration value="0119"/>
+<xs:enumeration value="0151"/>
+<xs:enumeration value="0220"/>
+<xs:enumeration value="0221"/>
+<xs:enumeration value="0222"/>
+<xs:enumeration value="0223"/>
+<xs:enumeration value="0224"/>
+<xs:enumeration value="0230"/>
+<xs:enumeration value="0231"/>
+<xs:enumeration value="0232"/>
+<xs:enumeration value="0233"/>
+<xs:enumeration value="0234"/>
+<xs:enumeration value="0302"/>
+<xs:enumeration value="0312"/>
+<xs:enumeration value="0327"/>
+<xs:enumeration value="0328"/>
+<xs:enumeration value="0329"/>
+<xs:enumeration value="0441"/>
+<xs:enumeration value="0571"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="address">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="addressLine1">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>c/o</en>
+<de>Adresszusatz (z.B. "c/o" oder "Lokalität")</de>
+<fr>Complément d'adresse (par ex. "c/o" ou "localité")</fr>
+<it>c/o</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="street">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Street</en>
+<de>Strasse</de>
+<fr>Rue</fr>
+<it>Via</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="houseNumber">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Nr.</en>
+<de>Nr.</de>
+<fr>No.</fr>
+<it>Nr.</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="swissZipCode">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>PLZ</en>
+<de>PLZ</de>
+<fr>NPA</fr>
+<it>PLZ</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="town">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Town</en>
+<de>Ort</de>
+<fr>Lieu</fr>
+<it>Luogo</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="naturalPerson">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="sex">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Geschlecht</en>
+<de>Geschlecht</de>
+<fr>Sexe</fr>
+<it>Geschlecht</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="0"/>
+<xs:enumeration value="1"/>
+<xs:enumeration value="2"/>
+<xs:enumeration value="3"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="firstName">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>First name</en>
+<de>Vorname</de>
+<fr>Prénom</fr>
+<it>Nome</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0044</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="officialName">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Surname</en>
+<de>Nachname</de>
+<fr>Nom</fr>
+<it>Nachname</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0044</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" name="countryOfOrigin">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Nationality</en>
+<de>Staatsbürgerschaft</de>
+<fr>Nationalité</fr>
+<it>Nazionalità</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:complexType>
+<xs:all>
+<xs:element name="isoCode">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="AD"/>
+<xs:enumeration value="AE"/>
+<xs:enumeration value="AF"/>
+<xs:enumeration value="AG"/>
+<xs:enumeration value="AI"/>
+<xs:enumeration value="AL"/>
+<xs:enumeration value="AM"/>
+<xs:enumeration value="AN"/>
+<xs:enumeration value="AO"/>
+<xs:enumeration value="AQ"/>
+<xs:enumeration value="AR"/>
+<xs:enumeration value="AS"/>
+<xs:enumeration value="AT"/>
+<xs:enumeration value="AU"/>
+<xs:enumeration value="AW"/>
+<xs:enumeration value="AX"/>
+<xs:enumeration value="AZ"/>
+<xs:enumeration value="BA"/>
+<xs:enumeration value="BB"/>
+<xs:enumeration value="BD"/>
+<xs:enumeration value="BE"/>
+<xs:enumeration value="BF"/>
+<xs:enumeration value="BG"/>
+<xs:enumeration value="BH"/>
+<xs:enumeration value="BI"/>
+<xs:enumeration value="BJ"/>
+<xs:enumeration value="BL"/>
+<xs:enumeration value="BM"/>
+<xs:enumeration value="BN"/>
+<xs:enumeration value="BO"/>
+<xs:enumeration value="BQ"/>
+<xs:enumeration value="BR"/>
+<xs:enumeration value="BS"/>
+<xs:enumeration value="BT"/>
+<xs:enumeration value="BV"/>
+<xs:enumeration value="BW"/>
+<xs:enumeration value="BY"/>
+<xs:enumeration value="BZ"/>
+<xs:enumeration value="CA"/>
+<xs:enumeration value="CC"/>
+<xs:enumeration value="CD"/>
+<xs:enumeration value="CF"/>
+<xs:enumeration value="CG"/>
+<xs:enumeration value="CH"/>
+<xs:enumeration value="CI"/>
+<xs:enumeration value="CK"/>
+<xs:enumeration value="CL"/>
+<xs:enumeration value="CM"/>
+<xs:enumeration value="CN"/>
+<xs:enumeration value="CO"/>
+<xs:enumeration value="CR"/>
+<xs:enumeration value="CU"/>
+<xs:enumeration value="CV"/>
+<xs:enumeration value="CW"/>
+<xs:enumeration value="CX"/>
+<xs:enumeration value="CY"/>
+<xs:enumeration value="CZ"/>
+<xs:enumeration value="DE"/>
+<xs:enumeration value="DJ"/>
+<xs:enumeration value="DK"/>
+<xs:enumeration value="DM"/>
+<xs:enumeration value="DO"/>
+<xs:enumeration value="DZ"/>
+<xs:enumeration value="EC"/>
+<xs:enumeration value="EE"/>
+<xs:enumeration value="EG"/>
+<xs:enumeration value="EH"/>
+<xs:enumeration value="ER"/>
+<xs:enumeration value="ES"/>
+<xs:enumeration value="ET"/>
+<xs:enumeration value="FI"/>
+<xs:enumeration value="FJ"/>
+<xs:enumeration value="FK"/>
+<xs:enumeration value="FM"/>
+<xs:enumeration value="FO"/>
+<xs:enumeration value="FR"/>
+<xs:enumeration value="GA"/>
+<xs:enumeration value="GB"/>
+<xs:enumeration value="GD"/>
+<xs:enumeration value="GE"/>
+<xs:enumeration value="GF"/>
+<xs:enumeration value="GG"/>
+<xs:enumeration value="GH"/>
+<xs:enumeration value="GI"/>
+<xs:enumeration value="GL"/>
+<xs:enumeration value="GM"/>
+<xs:enumeration value="GN"/>
+<xs:enumeration value="GP"/>
+<xs:enumeration value="GQ"/>
+<xs:enumeration value="GR"/>
+<xs:enumeration value="GS"/>
+<xs:enumeration value="GT"/>
+<xs:enumeration value="GU"/>
+<xs:enumeration value="GW"/>
+<xs:enumeration value="GY"/>
+<xs:enumeration value="HK"/>
+<xs:enumeration value="HM"/>
+<xs:enumeration value="HN"/>
+<xs:enumeration value="HR"/>
+<xs:enumeration value="HT"/>
+<xs:enumeration value="HU"/>
+<xs:enumeration value="ID"/>
+<xs:enumeration value="IE"/>
+<xs:enumeration value="IL"/>
+<xs:enumeration value="IM"/>
+<xs:enumeration value="IN"/>
+<xs:enumeration value="IO"/>
+<xs:enumeration value="IQ"/>
+<xs:enumeration value="IR"/>
+<xs:enumeration value="IS"/>
+<xs:enumeration value="IT"/>
+<xs:enumeration value="JE"/>
+<xs:enumeration value="JM"/>
+<xs:enumeration value="JO"/>
+<xs:enumeration value="JP"/>
+<xs:enumeration value="KE"/>
+<xs:enumeration value="KG"/>
+<xs:enumeration value="KH"/>
+<xs:enumeration value="KI"/>
+<xs:enumeration value="KM"/>
+<xs:enumeration value="KN"/>
+<xs:enumeration value="KP"/>
+<xs:enumeration value="KR"/>
+<xs:enumeration value="KW"/>
+<xs:enumeration value="KY"/>
+<xs:enumeration value="KZ"/>
+<xs:enumeration value="LA"/>
+<xs:enumeration value="LB"/>
+<xs:enumeration value="LC"/>
+<xs:enumeration value="LI"/>
+<xs:enumeration value="LK"/>
+<xs:enumeration value="LR"/>
+<xs:enumeration value="LS"/>
+<xs:enumeration value="LT"/>
+<xs:enumeration value="LU"/>
+<xs:enumeration value="LV"/>
+<xs:enumeration value="LY"/>
+<xs:enumeration value="MA"/>
+<xs:enumeration value="MC"/>
+<xs:enumeration value="MD"/>
+<xs:enumeration value="ME"/>
+<xs:enumeration value="MF"/>
+<xs:enumeration value="MG"/>
+<xs:enumeration value="MH"/>
+<xs:enumeration value="MK"/>
+<xs:enumeration value="ML"/>
+<xs:enumeration value="MM"/>
+<xs:enumeration value="MN"/>
+<xs:enumeration value="MO"/>
+<xs:enumeration value="MP"/>
+<xs:enumeration value="MQ"/>
+<xs:enumeration value="MR"/>
+<xs:enumeration value="MS"/>
+<xs:enumeration value="MT"/>
+<xs:enumeration value="MU"/>
+<xs:enumeration value="MV"/>
+<xs:enumeration value="MW"/>
+<xs:enumeration value="MX"/>
+<xs:enumeration value="MY"/>
+<xs:enumeration value="MZ"/>
+<xs:enumeration value="NA"/>
+<xs:enumeration value="NC"/>
+<xs:enumeration value="NE"/>
+<xs:enumeration value="NF"/>
+<xs:enumeration value="NG"/>
+<xs:enumeration value="NI"/>
+<xs:enumeration value="NL"/>
+<xs:enumeration value="NO"/>
+<xs:enumeration value="NP"/>
+<xs:enumeration value="NR"/>
+<xs:enumeration value="NU"/>
+<xs:enumeration value="NZ"/>
+<xs:enumeration value="OM"/>
+<xs:enumeration value="PA"/>
+<xs:enumeration value="PE"/>
+<xs:enumeration value="PF"/>
+<xs:enumeration value="PG"/>
+<xs:enumeration value="PH"/>
+<xs:enumeration value="PK"/>
+<xs:enumeration value="PL"/>
+<xs:enumeration value="PM"/>
+<xs:enumeration value="PN"/>
+<xs:enumeration value="PR"/>
+<xs:enumeration value="PS"/>
+<xs:enumeration value="PT"/>
+<xs:enumeration value="PW"/>
+<xs:enumeration value="PY"/>
+<xs:enumeration value="QA"/>
+<xs:enumeration value="RE"/>
+<xs:enumeration value="RO"/>
+<xs:enumeration value="RS"/>
+<xs:enumeration value="RU"/>
+<xs:enumeration value="RW"/>
+<xs:enumeration value="SA"/>
+<xs:enumeration value="SB"/>
+<xs:enumeration value="SC"/>
+<xs:enumeration value="SD"/>
+<xs:enumeration value="SE"/>
+<xs:enumeration value="SG"/>
+<xs:enumeration value="SH"/>
+<xs:enumeration value="SI"/>
+<xs:enumeration value="SJ"/>
+<xs:enumeration value="SK"/>
+<xs:enumeration value="SL"/>
+<xs:enumeration value="SM"/>
+<xs:enumeration value="SN"/>
+<xs:enumeration value="SO"/>
+<xs:enumeration value="SR"/>
+<xs:enumeration value="SS"/>
+<xs:enumeration value="ST"/>
+<xs:enumeration value="SV"/>
+<xs:enumeration value="SX"/>
+<xs:enumeration value="SY"/>
+<xs:enumeration value="SZ"/>
+<xs:enumeration value="TC"/>
+<xs:enumeration value="TD"/>
+<xs:enumeration value="TF"/>
+<xs:enumeration value="TG"/>
+<xs:enumeration value="TH"/>
+<xs:enumeration value="TJ"/>
+<xs:enumeration value="TK"/>
+<xs:enumeration value="TL"/>
+<xs:enumeration value="TM"/>
+<xs:enumeration value="TN"/>
+<xs:enumeration value="TO"/>
+<xs:enumeration value="TR"/>
+<xs:enumeration value="TT"/>
+<xs:enumeration value="TV"/>
+<xs:enumeration value="TW"/>
+<xs:enumeration value="TZ"/>
+<xs:enumeration value="UA"/>
+<xs:enumeration value="UG"/>
+<xs:enumeration value="UM"/>
+<xs:enumeration value="US"/>
+<xs:enumeration value="UY"/>
+<xs:enumeration value="UZ"/>
+<xs:enumeration value="VA"/>
+<xs:enumeration value="VC"/>
+<xs:enumeration value="VE"/>
+<xs:enumeration value="VG"/>
+<xs:enumeration value="VI"/>
+<xs:enumeration value="VN"/>
+<xs:enumeration value="VU"/>
+<xs:enumeration value="WF"/>
+<xs:enumeration value="WS"/>
+<xs:enumeration value="XK"/>
+<xs:enumeration value="YE"/>
+<xs:enumeration value="YT"/>
+<xs:enumeration value="ZA"/>
+<xs:enumeration value="ZM"/>
+<xs:enumeration value="ZW"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:all>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="placeOfOrigin">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Place of origin</en>
+<de>Heimatort</de>
+<fr>Lieu d’origine</fr>
+<it>Luogo d’origine</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="dateOfBirth">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Geburtsdatum</en>
+<de>Geburtsdatum</de>
+<fr>Date de naissance</fr>
+<it>Geburtsdatum</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="deathDate">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="selectType">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="dateOfDeath"/>
+<xs:enumeration value="dateFromToDeath"/>
+<xs:enumeration value="dateFoundDeath"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="residence">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="selectType">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Wohnsitz</en>
+<de>Wohnsitz</de>
+<fr>Domicile</fr>
+<it>Wohnsitz</it>
+</label>
+<description>
+<en>Ist die Person bereits verstorben, geben Sie bitte den letzten Wohnsitz ein.</en>
+<de>Ist die Person bereits verstorben, geben Sie bitte den letzten Wohnsitz ein.</de>
+<fr>Ist die Person bereits verstorben, geben Sie bitte den letzten Wohnsitz ein.</fr>
+<it>Ist die Person bereits verstorben, geben Sie bitte den letzten Wohnsitz ein.</it>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="noSpec"/>
+<xs:enumeration value="switzerland"/>
+<xs:enumeration value="foreign"/>
+<xs:enumeration value="unknown"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="addressSwitzerland">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="addressLine1">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>c/o</en>
+<de>Adresszusatz (z.B. "c/o" oder "Lokalität")</de>
+<fr>Complément d'adresse (par ex. "c/o" ou "localité")</fr>
+<it>c/o</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="street">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Street</en>
+<de>Strasse</de>
+<fr>Rue</fr>
+<it>Via</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="houseNumber">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Nr.</en>
+<de>Nr.</de>
+<fr>No.</fr>
+<it>Nr.</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="swissZipCode">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>PLZ</en>
+<de>PLZ</de>
+<fr>NPA</fr>
+<it>PLZ</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="town">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Town</en>
+<de>Ort</de>
+<fr>Lieu</fr>
+<it>Luogo</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="addressForeign">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="addressCustomText">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Adresse</en>
+<de>Adresse</de>
+<fr>Adresse</fr>
+<it>Adresse</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" name="country">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Staat</en>
+<de>Staat</de>
+<fr>État</fr>
+<it>Staat</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:complexType>
+<xs:all>
+<xs:element name="isoCode">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="AD"/>
+<xs:enumeration value="AE"/>
+<xs:enumeration value="AF"/>
+<xs:enumeration value="AG"/>
+<xs:enumeration value="AI"/>
+<xs:enumeration value="AL"/>
+<xs:enumeration value="AM"/>
+<xs:enumeration value="AN"/>
+<xs:enumeration value="AO"/>
+<xs:enumeration value="AQ"/>
+<xs:enumeration value="AR"/>
+<xs:enumeration value="AS"/>
+<xs:enumeration value="AT"/>
+<xs:enumeration value="AU"/>
+<xs:enumeration value="AW"/>
+<xs:enumeration value="AX"/>
+<xs:enumeration value="AZ"/>
+<xs:enumeration value="BA"/>
+<xs:enumeration value="BB"/>
+<xs:enumeration value="BD"/>
+<xs:enumeration value="BE"/>
+<xs:enumeration value="BF"/>
+<xs:enumeration value="BG"/>
+<xs:enumeration value="BH"/>
+<xs:enumeration value="BI"/>
+<xs:enumeration value="BJ"/>
+<xs:enumeration value="BL"/>
+<xs:enumeration value="BM"/>
+<xs:enumeration value="BN"/>
+<xs:enumeration value="BO"/>
+<xs:enumeration value="BQ"/>
+<xs:enumeration value="BR"/>
+<xs:enumeration value="BS"/>
+<xs:enumeration value="BT"/>
+<xs:enumeration value="BV"/>
+<xs:enumeration value="BW"/>
+<xs:enumeration value="BY"/>
+<xs:enumeration value="BZ"/>
+<xs:enumeration value="CA"/>
+<xs:enumeration value="CC"/>
+<xs:enumeration value="CD"/>
+<xs:enumeration value="CF"/>
+<xs:enumeration value="CG"/>
+<xs:enumeration value="CH"/>
+<xs:enumeration value="CI"/>
+<xs:enumeration value="CK"/>
+<xs:enumeration value="CL"/>
+<xs:enumeration value="CM"/>
+<xs:enumeration value="CN"/>
+<xs:enumeration value="CO"/>
+<xs:enumeration value="CR"/>
+<xs:enumeration value="CU"/>
+<xs:enumeration value="CV"/>
+<xs:enumeration value="CW"/>
+<xs:enumeration value="CX"/>
+<xs:enumeration value="CY"/>
+<xs:enumeration value="CZ"/>
+<xs:enumeration value="DE"/>
+<xs:enumeration value="DJ"/>
+<xs:enumeration value="DK"/>
+<xs:enumeration value="DM"/>
+<xs:enumeration value="DO"/>
+<xs:enumeration value="DZ"/>
+<xs:enumeration value="EC"/>
+<xs:enumeration value="EE"/>
+<xs:enumeration value="EG"/>
+<xs:enumeration value="EH"/>
+<xs:enumeration value="ER"/>
+<xs:enumeration value="ES"/>
+<xs:enumeration value="ET"/>
+<xs:enumeration value="FI"/>
+<xs:enumeration value="FJ"/>
+<xs:enumeration value="FK"/>
+<xs:enumeration value="FM"/>
+<xs:enumeration value="FO"/>
+<xs:enumeration value="FR"/>
+<xs:enumeration value="GA"/>
+<xs:enumeration value="GB"/>
+<xs:enumeration value="GD"/>
+<xs:enumeration value="GE"/>
+<xs:enumeration value="GF"/>
+<xs:enumeration value="GG"/>
+<xs:enumeration value="GH"/>
+<xs:enumeration value="GI"/>
+<xs:enumeration value="GL"/>
+<xs:enumeration value="GM"/>
+<xs:enumeration value="GN"/>
+<xs:enumeration value="GP"/>
+<xs:enumeration value="GQ"/>
+<xs:enumeration value="GR"/>
+<xs:enumeration value="GS"/>
+<xs:enumeration value="GT"/>
+<xs:enumeration value="GU"/>
+<xs:enumeration value="GW"/>
+<xs:enumeration value="GY"/>
+<xs:enumeration value="HK"/>
+<xs:enumeration value="HM"/>
+<xs:enumeration value="HN"/>
+<xs:enumeration value="HR"/>
+<xs:enumeration value="HT"/>
+<xs:enumeration value="HU"/>
+<xs:enumeration value="ID"/>
+<xs:enumeration value="IE"/>
+<xs:enumeration value="IL"/>
+<xs:enumeration value="IM"/>
+<xs:enumeration value="IN"/>
+<xs:enumeration value="IO"/>
+<xs:enumeration value="IQ"/>
+<xs:enumeration value="IR"/>
+<xs:enumeration value="IS"/>
+<xs:enumeration value="IT"/>
+<xs:enumeration value="JE"/>
+<xs:enumeration value="JM"/>
+<xs:enumeration value="JO"/>
+<xs:enumeration value="JP"/>
+<xs:enumeration value="KE"/>
+<xs:enumeration value="KG"/>
+<xs:enumeration value="KH"/>
+<xs:enumeration value="KI"/>
+<xs:enumeration value="KM"/>
+<xs:enumeration value="KN"/>
+<xs:enumeration value="KP"/>
+<xs:enumeration value="KR"/>
+<xs:enumeration value="KW"/>
+<xs:enumeration value="KY"/>
+<xs:enumeration value="KZ"/>
+<xs:enumeration value="LA"/>
+<xs:enumeration value="LB"/>
+<xs:enumeration value="LC"/>
+<xs:enumeration value="LI"/>
+<xs:enumeration value="LK"/>
+<xs:enumeration value="LR"/>
+<xs:enumeration value="LS"/>
+<xs:enumeration value="LT"/>
+<xs:enumeration value="LU"/>
+<xs:enumeration value="LV"/>
+<xs:enumeration value="LY"/>
+<xs:enumeration value="MA"/>
+<xs:enumeration value="MC"/>
+<xs:enumeration value="MD"/>
+<xs:enumeration value="ME"/>
+<xs:enumeration value="MF"/>
+<xs:enumeration value="MG"/>
+<xs:enumeration value="MH"/>
+<xs:enumeration value="MK"/>
+<xs:enumeration value="ML"/>
+<xs:enumeration value="MM"/>
+<xs:enumeration value="MN"/>
+<xs:enumeration value="MO"/>
+<xs:enumeration value="MP"/>
+<xs:enumeration value="MQ"/>
+<xs:enumeration value="MR"/>
+<xs:enumeration value="MS"/>
+<xs:enumeration value="MT"/>
+<xs:enumeration value="MU"/>
+<xs:enumeration value="MV"/>
+<xs:enumeration value="MW"/>
+<xs:enumeration value="MX"/>
+<xs:enumeration value="MY"/>
+<xs:enumeration value="MZ"/>
+<xs:enumeration value="NA"/>
+<xs:enumeration value="NC"/>
+<xs:enumeration value="NE"/>
+<xs:enumeration value="NF"/>
+<xs:enumeration value="NG"/>
+<xs:enumeration value="NI"/>
+<xs:enumeration value="NL"/>
+<xs:enumeration value="NO"/>
+<xs:enumeration value="NP"/>
+<xs:enumeration value="NR"/>
+<xs:enumeration value="NU"/>
+<xs:enumeration value="NZ"/>
+<xs:enumeration value="OM"/>
+<xs:enumeration value="PA"/>
+<xs:enumeration value="PE"/>
+<xs:enumeration value="PF"/>
+<xs:enumeration value="PG"/>
+<xs:enumeration value="PH"/>
+<xs:enumeration value="PK"/>
+<xs:enumeration value="PL"/>
+<xs:enumeration value="PM"/>
+<xs:enumeration value="PN"/>
+<xs:enumeration value="PR"/>
+<xs:enumeration value="PS"/>
+<xs:enumeration value="PT"/>
+<xs:enumeration value="PW"/>
+<xs:enumeration value="PY"/>
+<xs:enumeration value="QA"/>
+<xs:enumeration value="RE"/>
+<xs:enumeration value="RO"/>
+<xs:enumeration value="RS"/>
+<xs:enumeration value="RU"/>
+<xs:enumeration value="RW"/>
+<xs:enumeration value="SA"/>
+<xs:enumeration value="SB"/>
+<xs:enumeration value="SC"/>
+<xs:enumeration value="SD"/>
+<xs:enumeration value="SE"/>
+<xs:enumeration value="SG"/>
+<xs:enumeration value="SH"/>
+<xs:enumeration value="SI"/>
+<xs:enumeration value="SJ"/>
+<xs:enumeration value="SK"/>
+<xs:enumeration value="SL"/>
+<xs:enumeration value="SM"/>
+<xs:enumeration value="SN"/>
+<xs:enumeration value="SO"/>
+<xs:enumeration value="SR"/>
+<xs:enumeration value="SS"/>
+<xs:enumeration value="ST"/>
+<xs:enumeration value="SV"/>
+<xs:enumeration value="SX"/>
+<xs:enumeration value="SY"/>
+<xs:enumeration value="SZ"/>
+<xs:enumeration value="TC"/>
+<xs:enumeration value="TD"/>
+<xs:enumeration value="TF"/>
+<xs:enumeration value="TG"/>
+<xs:enumeration value="TH"/>
+<xs:enumeration value="TJ"/>
+<xs:enumeration value="TK"/>
+<xs:enumeration value="TL"/>
+<xs:enumeration value="TM"/>
+<xs:enumeration value="TN"/>
+<xs:enumeration value="TO"/>
+<xs:enumeration value="TR"/>
+<xs:enumeration value="TT"/>
+<xs:enumeration value="TV"/>
+<xs:enumeration value="TW"/>
+<xs:enumeration value="TZ"/>
+<xs:enumeration value="UA"/>
+<xs:enumeration value="UG"/>
+<xs:enumeration value="UM"/>
+<xs:enumeration value="US"/>
+<xs:enumeration value="UY"/>
+<xs:enumeration value="UZ"/>
+<xs:enumeration value="VA"/>
+<xs:enumeration value="VC"/>
+<xs:enumeration value="VE"/>
+<xs:enumeration value="VG"/>
+<xs:enumeration value="VI"/>
+<xs:enumeration value="VN"/>
+<xs:enumeration value="VU"/>
+<xs:enumeration value="WF"/>
+<xs:enumeration value="WS"/>
+<xs:enumeration value="XK"/>
+<xs:enumeration value="YE"/>
+<xs:enumeration value="YT"/>
+<xs:enumeration value="ZA"/>
+<xs:enumeration value="ZM"/>
+<xs:enumeration value="ZW"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:all>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="date">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Datum</en>
+<de>Datum</de>
+<fr>Date</fr>
+<it>Datum</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="dateFrom">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Datum von</en>
+<de>Datum von</de>
+<fr>Date de</fr>
+<it>Datum von</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="dateTo">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Datum bis</en>
+<de>Datum bis</de>
+<fr>Date jusqu'à</fr>
+<it>Datum bis</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="secondary">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="element">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="key">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="valueType">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="term">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Angepasster Titel des Elements</en>
+<de>Angepasster Titel des Elements</de>
+<fr>Titre adapté de l'élément</fr>
+<it>Angepasster Titel des Elements</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Angepasster Titel des Elements (Übersetzung)</en>
+<de>Angepasster Titel des Elements (Übersetzung)</de>
+<fr>Titre adapté de l'élément (traduction)</fr>
+<it>Angepasster Titel des Elements (Übersetzung)</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:boolean" minOccurs="0" name="customTerm">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Bezeichnung des Elements anpassen</en>
+<de>Bezeichnung des Elements anpassen</de>
+<fr>Adapter le nom de l'élément</fr>
+<it>Bezeichnung des Elements anpassen</it>
+</label>
+<description>
+<en>Mit dieser Option können Sie den allgemeinen Begriff präzisieren. Auf Ihrer Meldung wird dann die angepasste Bezeichnung ausgegeben.</en>
+<de>Mit dieser Option können Sie den allgemeinen Begriff präzisieren. Auf Ihrer Meldung wird dann die angepasste Bezeichnung ausgegeben.</de>
+<fr>Cette option vous permet de préciser la déscription générale. La description adaptée sera alors publiée sur votre publication.</fr>
+<it>Mit dieser Option können Sie den allgemeinen Begriff präzisieren. Auf Ihrer Meldung wird dann die angepasste Bezeichnung ausgegeben.</it>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="delimiterTitle">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="enumeration">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="key">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="valueText">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="key">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="valueType">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it/>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="term">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Texteingabe für Element</en>
+<de>Texteingabe für Element</de>
+<fr>Saisie de texte pour l'élément</fr>
+<it>Texteingabe für Element</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Texteingabe für Element (Übersetzung)</en>
+<de>Texteingabe für Element (Übersetzung)</de>
+<fr>Saisie de texte pour l'élément (traduction)</fr>
+<it>Texteingabe für Element (Übersetzung)</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="url">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Link eingeben</en>
+<de>Link eingeben</de>
+<fr>Indiquer le lien</fr>
+<it>Link eingeben</it>
+</label>
+<description>
+<en>Bitte geben Sie eine gültige URL ein</en>
+<de>Bitte geben Sie eine gültige URL ein</de>
+<fr>Veuillez saisir une URL valide</fr>
+<it>Bitte geben Sie eine gültige URL ein</it>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Link eingeben (Übersetzung)</en>
+<de>Link eingeben (Übersetzung)</de>
+<fr>Indiquer le lien (traduction)</fr>
+<it>Link eingeben (Übersetzung)</it>
+</label>
+<description>
+<en>Bitte geben Sie eine gültige URL ein</en>
+<de>Bitte geben Sie eine gültige URL ein</de>
+<fr>Veuillez saisir une URL valide</fr>
+<it>Bitte geben Sie eine gültige URL ein</it>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="valueTextNeutral">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Nummer eingeben</en>
+<de>Nummer eingeben</de>
+<fr>Saisir le numéro</fr>
+<it>Nummer eingeben</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="valueRichText">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Texteingabe für Element</en>
+<de>Texteingabe für Element</de>
+<fr>Saisie de texte pour l'élément</fr>
+<it>Texteingabe für Element</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Texteingabe für Element (Übersetzung)</en>
+<de>Texteingabe für Element (Übersetzung)</de>
+<fr>Saisie de texte pour l'élément (traduction)</fr>
+<it>Texteingabe für Element (Übersetzung)</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="address">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="addressLine1">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>c/o</en>
+<de>Adresszusatz (z.B. "c/o" oder "Lokalität")</de>
+<fr>Complément d'adresse (par ex. "c/o" ou "localité")</fr>
+<it>c/o</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="street">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Street</en>
+<de>Strasse</de>
+<fr>Rue</fr>
+<it>Via</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="houseNumber">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Nr.</en>
+<de>Nr.</de>
+<fr>No.</fr>
+<it>Nr.</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="swissZipCode">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>PLZ</en>
+<de>PLZ</de>
+<fr>NPA</fr>
+<it>PLZ</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="town">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Town</en>
+<de>Ort</de>
+<fr>Lieu</fr>
+<it>Luogo</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="subject">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="selectType">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en/>
+<de/>
+<fr/>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="naturalPerson"/>
+<xs:enumeration value="legalPerson"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="legalPerson">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:boolean" minOccurs="0" name="noUID">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Organisation not listed on the UID register or in the process of foundation</en>
+<de>Organisation ohne UID-Eintrag oder in Gründung</de>
+<fr>Organisation sans inscription IDE ou en cours de fondation</fr>
+<it>Organizzazione non iscritta nel registro IDI o in fase di costituzione</it>
+</label>
+<description>
+<en>Please only select this option if you are unable to find the organisation you are looking for (e.g. a specific authority, a foreign firm or an association that is not listed on the UID register.</en>
+<de>Bitte wählen Sie diese Option nur, wenn Sie die Organisation nicht über die Organisationssuche finden können (beispielsweise eine spezifische Behörde, eine ausländische Firma oder einen nicht im UID-Register geführten Verein).</de>
+<fr>Choisissez cette option uniquement si vous ne parvenez pas à trouver l'organisation par la fonction de recherche d'organisation (p. ex. une autorité spécifique, une entreprise étrangère ou une association non inscrite au registre IDE).</fr>
+<it>Scegli questa opzione soltanto se non sei riuscito a trovare la tua organizzazione (p. es. una specifica autorità, una azienda straniera o un'associazione non presente nel registro IDI).</it>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="company">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="name">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Name</en>
+<de>Name</de>
+<fr>Nom</fr>
+<it>Nome</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="customAddress">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Adresse</en>
+<de>Adresse</de>
+<fr>Adresse</fr>
+<it>Adresse</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" name="country">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Country</en>
+<de>Staat</de>
+<fr>État</fr>
+<it>Paese</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:complexType>
+<xs:all>
+<xs:element name="isoCode">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="AD"/>
+<xs:enumeration value="AE"/>
+<xs:enumeration value="AF"/>
+<xs:enumeration value="AG"/>
+<xs:enumeration value="AI"/>
+<xs:enumeration value="AL"/>
+<xs:enumeration value="AM"/>
+<xs:enumeration value="AN"/>
+<xs:enumeration value="AO"/>
+<xs:enumeration value="AQ"/>
+<xs:enumeration value="AR"/>
+<xs:enumeration value="AS"/>
+<xs:enumeration value="AT"/>
+<xs:enumeration value="AU"/>
+<xs:enumeration value="AW"/>
+<xs:enumeration value="AX"/>
+<xs:enumeration value="AZ"/>
+<xs:enumeration value="BA"/>
+<xs:enumeration value="BB"/>
+<xs:enumeration value="BD"/>
+<xs:enumeration value="BE"/>
+<xs:enumeration value="BF"/>
+<xs:enumeration value="BG"/>
+<xs:enumeration value="BH"/>
+<xs:enumeration value="BI"/>
+<xs:enumeration value="BJ"/>
+<xs:enumeration value="BL"/>
+<xs:enumeration value="BM"/>
+<xs:enumeration value="BN"/>
+<xs:enumeration value="BO"/>
+<xs:enumeration value="BQ"/>
+<xs:enumeration value="BR"/>
+<xs:enumeration value="BS"/>
+<xs:enumeration value="BT"/>
+<xs:enumeration value="BV"/>
+<xs:enumeration value="BW"/>
+<xs:enumeration value="BY"/>
+<xs:enumeration value="BZ"/>
+<xs:enumeration value="CA"/>
+<xs:enumeration value="CC"/>
+<xs:enumeration value="CD"/>
+<xs:enumeration value="CF"/>
+<xs:enumeration value="CG"/>
+<xs:enumeration value="CH"/>
+<xs:enumeration value="CI"/>
+<xs:enumeration value="CK"/>
+<xs:enumeration value="CL"/>
+<xs:enumeration value="CM"/>
+<xs:enumeration value="CN"/>
+<xs:enumeration value="CO"/>
+<xs:enumeration value="CR"/>
+<xs:enumeration value="CU"/>
+<xs:enumeration value="CV"/>
+<xs:enumeration value="CW"/>
+<xs:enumeration value="CX"/>
+<xs:enumeration value="CY"/>
+<xs:enumeration value="CZ"/>
+<xs:enumeration value="DE"/>
+<xs:enumeration value="DJ"/>
+<xs:enumeration value="DK"/>
+<xs:enumeration value="DM"/>
+<xs:enumeration value="DO"/>
+<xs:enumeration value="DZ"/>
+<xs:enumeration value="EC"/>
+<xs:enumeration value="EE"/>
+<xs:enumeration value="EG"/>
+<xs:enumeration value="EH"/>
+<xs:enumeration value="ER"/>
+<xs:enumeration value="ES"/>
+<xs:enumeration value="ET"/>
+<xs:enumeration value="FI"/>
+<xs:enumeration value="FJ"/>
+<xs:enumeration value="FK"/>
+<xs:enumeration value="FM"/>
+<xs:enumeration value="FO"/>
+<xs:enumeration value="FR"/>
+<xs:enumeration value="GA"/>
+<xs:enumeration value="GB"/>
+<xs:enumeration value="GD"/>
+<xs:enumeration value="GE"/>
+<xs:enumeration value="GF"/>
+<xs:enumeration value="GG"/>
+<xs:enumeration value="GH"/>
+<xs:enumeration value="GI"/>
+<xs:enumeration value="GL"/>
+<xs:enumeration value="GM"/>
+<xs:enumeration value="GN"/>
+<xs:enumeration value="GP"/>
+<xs:enumeration value="GQ"/>
+<xs:enumeration value="GR"/>
+<xs:enumeration value="GS"/>
+<xs:enumeration value="GT"/>
+<xs:enumeration value="GU"/>
+<xs:enumeration value="GW"/>
+<xs:enumeration value="GY"/>
+<xs:enumeration value="HK"/>
+<xs:enumeration value="HM"/>
+<xs:enumeration value="HN"/>
+<xs:enumeration value="HR"/>
+<xs:enumeration value="HT"/>
+<xs:enumeration value="HU"/>
+<xs:enumeration value="ID"/>
+<xs:enumeration value="IE"/>
+<xs:enumeration value="IL"/>
+<xs:enumeration value="IM"/>
+<xs:enumeration value="IN"/>
+<xs:enumeration value="IO"/>
+<xs:enumeration value="IQ"/>
+<xs:enumeration value="IR"/>
+<xs:enumeration value="IS"/>
+<xs:enumeration value="IT"/>
+<xs:enumeration value="JE"/>
+<xs:enumeration value="JM"/>
+<xs:enumeration value="JO"/>
+<xs:enumeration value="JP"/>
+<xs:enumeration value="KE"/>
+<xs:enumeration value="KG"/>
+<xs:enumeration value="KH"/>
+<xs:enumeration value="KI"/>
+<xs:enumeration value="KM"/>
+<xs:enumeration value="KN"/>
+<xs:enumeration value="KP"/>
+<xs:enumeration value="KR"/>
+<xs:enumeration value="KW"/>
+<xs:enumeration value="KY"/>
+<xs:enumeration value="KZ"/>
+<xs:enumeration value="LA"/>
+<xs:enumeration value="LB"/>
+<xs:enumeration value="LC"/>
+<xs:enumeration value="LI"/>
+<xs:enumeration value="LK"/>
+<xs:enumeration value="LR"/>
+<xs:enumeration value="LS"/>
+<xs:enumeration value="LT"/>
+<xs:enumeration value="LU"/>
+<xs:enumeration value="LV"/>
+<xs:enumeration value="LY"/>
+<xs:enumeration value="MA"/>
+<xs:enumeration value="MC"/>
+<xs:enumeration value="MD"/>
+<xs:enumeration value="ME"/>
+<xs:enumeration value="MF"/>
+<xs:enumeration value="MG"/>
+<xs:enumeration value="MH"/>
+<xs:enumeration value="MK"/>
+<xs:enumeration value="ML"/>
+<xs:enumeration value="MM"/>
+<xs:enumeration value="MN"/>
+<xs:enumeration value="MO"/>
+<xs:enumeration value="MP"/>
+<xs:enumeration value="MQ"/>
+<xs:enumeration value="MR"/>
+<xs:enumeration value="MS"/>
+<xs:enumeration value="MT"/>
+<xs:enumeration value="MU"/>
+<xs:enumeration value="MV"/>
+<xs:enumeration value="MW"/>
+<xs:enumeration value="MX"/>
+<xs:enumeration value="MY"/>
+<xs:enumeration value="MZ"/>
+<xs:enumeration value="NA"/>
+<xs:enumeration value="NC"/>
+<xs:enumeration value="NE"/>
+<xs:enumeration value="NF"/>
+<xs:enumeration value="NG"/>
+<xs:enumeration value="NI"/>
+<xs:enumeration value="NL"/>
+<xs:enumeration value="NO"/>
+<xs:enumeration value="NP"/>
+<xs:enumeration value="NR"/>
+<xs:enumeration value="NU"/>
+<xs:enumeration value="NZ"/>
+<xs:enumeration value="OM"/>
+<xs:enumeration value="PA"/>
+<xs:enumeration value="PE"/>
+<xs:enumeration value="PF"/>
+<xs:enumeration value="PG"/>
+<xs:enumeration value="PH"/>
+<xs:enumeration value="PK"/>
+<xs:enumeration value="PL"/>
+<xs:enumeration value="PM"/>
+<xs:enumeration value="PN"/>
+<xs:enumeration value="PR"/>
+<xs:enumeration value="PS"/>
+<xs:enumeration value="PT"/>
+<xs:enumeration value="PW"/>
+<xs:enumeration value="PY"/>
+<xs:enumeration value="QA"/>
+<xs:enumeration value="RE"/>
+<xs:enumeration value="RO"/>
+<xs:enumeration value="RS"/>
+<xs:enumeration value="RU"/>
+<xs:enumeration value="RW"/>
+<xs:enumeration value="SA"/>
+<xs:enumeration value="SB"/>
+<xs:enumeration value="SC"/>
+<xs:enumeration value="SD"/>
+<xs:enumeration value="SE"/>
+<xs:enumeration value="SG"/>
+<xs:enumeration value="SH"/>
+<xs:enumeration value="SI"/>
+<xs:enumeration value="SJ"/>
+<xs:enumeration value="SK"/>
+<xs:enumeration value="SL"/>
+<xs:enumeration value="SM"/>
+<xs:enumeration value="SN"/>
+<xs:enumeration value="SO"/>
+<xs:enumeration value="SR"/>
+<xs:enumeration value="SS"/>
+<xs:enumeration value="ST"/>
+<xs:enumeration value="SV"/>
+<xs:enumeration value="SX"/>
+<xs:enumeration value="SY"/>
+<xs:enumeration value="SZ"/>
+<xs:enumeration value="TC"/>
+<xs:enumeration value="TD"/>
+<xs:enumeration value="TF"/>
+<xs:enumeration value="TG"/>
+<xs:enumeration value="TH"/>
+<xs:enumeration value="TJ"/>
+<xs:enumeration value="TK"/>
+<xs:enumeration value="TL"/>
+<xs:enumeration value="TM"/>
+<xs:enumeration value="TN"/>
+<xs:enumeration value="TO"/>
+<xs:enumeration value="TR"/>
+<xs:enumeration value="TT"/>
+<xs:enumeration value="TV"/>
+<xs:enumeration value="TW"/>
+<xs:enumeration value="TZ"/>
+<xs:enumeration value="UA"/>
+<xs:enumeration value="UG"/>
+<xs:enumeration value="UM"/>
+<xs:enumeration value="US"/>
+<xs:enumeration value="UY"/>
+<xs:enumeration value="UZ"/>
+<xs:enumeration value="VA"/>
+<xs:enumeration value="VC"/>
+<xs:enumeration value="VE"/>
+<xs:enumeration value="VG"/>
+<xs:enumeration value="VI"/>
+<xs:enumeration value="VN"/>
+<xs:enumeration value="VU"/>
+<xs:enumeration value="WF"/>
+<xs:enumeration value="WS"/>
+<xs:enumeration value="XK"/>
+<xs:enumeration value="YE"/>
+<xs:enumeration value="YT"/>
+<xs:enumeration value="ZA"/>
+<xs:enumeration value="ZM"/>
+<xs:enumeration value="ZW"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:all>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="uid">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>UID</en>
+<de>UID</de>
+<fr>UID</fr>
+<it>UID</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="uidOrganisationId">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>UID-OrganisationID</en>
+<de>UID-OrganisationID</de>
+<fr>UID-OrganisationID</fr>
+<it>UID-OrganisationID</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" name="uidOrganisationIdCategorie">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>UID-OrganisationIdCategorie</en>
+<de>UID-OrganisationIdCategorie</de>
+<fr>UID-OrganisationIdCategorie</fr>
+<it>UID-OrganisationIdCategorie</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="CHE"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element minOccurs="0" name="legalForm">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Legal form</en>
+<de>Rechtsform</de>
+<fr>Forme juridique</fr>
+<it>Forma giuridica</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="0101"/>
+<xs:enumeration value="0103"/>
+<xs:enumeration value="0104"/>
+<xs:enumeration value="0105"/>
+<xs:enumeration value="0106"/>
+<xs:enumeration value="0107"/>
+<xs:enumeration value="0108"/>
+<xs:enumeration value="0109"/>
+<xs:enumeration value="0110"/>
+<xs:enumeration value="0111"/>
+<xs:enumeration value="0113"/>
+<xs:enumeration value="0114"/>
+<xs:enumeration value="0115"/>
+<xs:enumeration value="0116"/>
+<xs:enumeration value="0117"/>
+<xs:enumeration value="0118"/>
+<xs:enumeration value="0119"/>
+<xs:enumeration value="0151"/>
+<xs:enumeration value="0220"/>
+<xs:enumeration value="0221"/>
+<xs:enumeration value="0222"/>
+<xs:enumeration value="0223"/>
+<xs:enumeration value="0224"/>
+<xs:enumeration value="0230"/>
+<xs:enumeration value="0231"/>
+<xs:enumeration value="0232"/>
+<xs:enumeration value="0233"/>
+<xs:enumeration value="0234"/>
+<xs:enumeration value="0302"/>
+<xs:enumeration value="0312"/>
+<xs:enumeration value="0327"/>
+<xs:enumeration value="0328"/>
+<xs:enumeration value="0329"/>
+<xs:enumeration value="0441"/>
+<xs:enumeration value="0571"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="address">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="addressLine1">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>c/o</en>
+<de>Adresszusatz (z.B. "c/o" oder "Lokalität")</de>
+<fr>Complément d'adresse (par ex. "c/o" ou "localité")</fr>
+<it>c/o</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="street">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Street</en>
+<de>Strasse</de>
+<fr>Rue</fr>
+<it>Via</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="houseNumber">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Nr.</en>
+<de>Nr.</de>
+<fr>No.</fr>
+<it>Nr.</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="swissZipCode">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>PLZ</en>
+<de>PLZ</de>
+<fr>NPA</fr>
+<it>PLZ</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="town">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Town</en>
+<de>Ort</de>
+<fr>Lieu</fr>
+<it>Luogo</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="naturalPerson">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="sex">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Geschlecht</en>
+<de>Geschlecht</de>
+<fr>Sexe</fr>
+<it>Geschlecht</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0044 - whrereas "no Indication" (Digit 0) is not actually part of eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0044 - whrereas "no Indication" (Digit 0) is not actually part of eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0044 - whrereas "no Indication" (Digit 0) is not actually part of eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0044 - whrereas "no Indication" (Digit 0) is not actually part of eCH-0044</div></div></xs:documentation>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="0"/>
+<xs:enumeration value="1"/>
+<xs:enumeration value="2"/>
+<xs:enumeration value="3"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="firstName">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>First name</en>
+<de>Vorname</de>
+<fr>Prénom</fr>
+<it>Nome</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0044</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="officialName">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Surname</en>
+<de>Nachname</de>
+<fr>Nom</fr>
+<it>Nachname</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0044</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0044</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" name="countryOfOrigin">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Nationality</en>
+<de>Staatsbürgerschaft</de>
+<fr>Nationalité</fr>
+<it>Nazionalità</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:complexType>
+<xs:all>
+<xs:element name="isoCode">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="AD"/>
+<xs:enumeration value="AE"/>
+<xs:enumeration value="AF"/>
+<xs:enumeration value="AG"/>
+<xs:enumeration value="AI"/>
+<xs:enumeration value="AL"/>
+<xs:enumeration value="AM"/>
+<xs:enumeration value="AN"/>
+<xs:enumeration value="AO"/>
+<xs:enumeration value="AQ"/>
+<xs:enumeration value="AR"/>
+<xs:enumeration value="AS"/>
+<xs:enumeration value="AT"/>
+<xs:enumeration value="AU"/>
+<xs:enumeration value="AW"/>
+<xs:enumeration value="AX"/>
+<xs:enumeration value="AZ"/>
+<xs:enumeration value="BA"/>
+<xs:enumeration value="BB"/>
+<xs:enumeration value="BD"/>
+<xs:enumeration value="BE"/>
+<xs:enumeration value="BF"/>
+<xs:enumeration value="BG"/>
+<xs:enumeration value="BH"/>
+<xs:enumeration value="BI"/>
+<xs:enumeration value="BJ"/>
+<xs:enumeration value="BL"/>
+<xs:enumeration value="BM"/>
+<xs:enumeration value="BN"/>
+<xs:enumeration value="BO"/>
+<xs:enumeration value="BQ"/>
+<xs:enumeration value="BR"/>
+<xs:enumeration value="BS"/>
+<xs:enumeration value="BT"/>
+<xs:enumeration value="BV"/>
+<xs:enumeration value="BW"/>
+<xs:enumeration value="BY"/>
+<xs:enumeration value="BZ"/>
+<xs:enumeration value="CA"/>
+<xs:enumeration value="CC"/>
+<xs:enumeration value="CD"/>
+<xs:enumeration value="CF"/>
+<xs:enumeration value="CG"/>
+<xs:enumeration value="CH"/>
+<xs:enumeration value="CI"/>
+<xs:enumeration value="CK"/>
+<xs:enumeration value="CL"/>
+<xs:enumeration value="CM"/>
+<xs:enumeration value="CN"/>
+<xs:enumeration value="CO"/>
+<xs:enumeration value="CR"/>
+<xs:enumeration value="CU"/>
+<xs:enumeration value="CV"/>
+<xs:enumeration value="CW"/>
+<xs:enumeration value="CX"/>
+<xs:enumeration value="CY"/>
+<xs:enumeration value="CZ"/>
+<xs:enumeration value="DE"/>
+<xs:enumeration value="DJ"/>
+<xs:enumeration value="DK"/>
+<xs:enumeration value="DM"/>
+<xs:enumeration value="DO"/>
+<xs:enumeration value="DZ"/>
+<xs:enumeration value="EC"/>
+<xs:enumeration value="EE"/>
+<xs:enumeration value="EG"/>
+<xs:enumeration value="EH"/>
+<xs:enumeration value="ER"/>
+<xs:enumeration value="ES"/>
+<xs:enumeration value="ET"/>
+<xs:enumeration value="FI"/>
+<xs:enumeration value="FJ"/>
+<xs:enumeration value="FK"/>
+<xs:enumeration value="FM"/>
+<xs:enumeration value="FO"/>
+<xs:enumeration value="FR"/>
+<xs:enumeration value="GA"/>
+<xs:enumeration value="GB"/>
+<xs:enumeration value="GD"/>
+<xs:enumeration value="GE"/>
+<xs:enumeration value="GF"/>
+<xs:enumeration value="GG"/>
+<xs:enumeration value="GH"/>
+<xs:enumeration value="GI"/>
+<xs:enumeration value="GL"/>
+<xs:enumeration value="GM"/>
+<xs:enumeration value="GN"/>
+<xs:enumeration value="GP"/>
+<xs:enumeration value="GQ"/>
+<xs:enumeration value="GR"/>
+<xs:enumeration value="GS"/>
+<xs:enumeration value="GT"/>
+<xs:enumeration value="GU"/>
+<xs:enumeration value="GW"/>
+<xs:enumeration value="GY"/>
+<xs:enumeration value="HK"/>
+<xs:enumeration value="HM"/>
+<xs:enumeration value="HN"/>
+<xs:enumeration value="HR"/>
+<xs:enumeration value="HT"/>
+<xs:enumeration value="HU"/>
+<xs:enumeration value="ID"/>
+<xs:enumeration value="IE"/>
+<xs:enumeration value="IL"/>
+<xs:enumeration value="IM"/>
+<xs:enumeration value="IN"/>
+<xs:enumeration value="IO"/>
+<xs:enumeration value="IQ"/>
+<xs:enumeration value="IR"/>
+<xs:enumeration value="IS"/>
+<xs:enumeration value="IT"/>
+<xs:enumeration value="JE"/>
+<xs:enumeration value="JM"/>
+<xs:enumeration value="JO"/>
+<xs:enumeration value="JP"/>
+<xs:enumeration value="KE"/>
+<xs:enumeration value="KG"/>
+<xs:enumeration value="KH"/>
+<xs:enumeration value="KI"/>
+<xs:enumeration value="KM"/>
+<xs:enumeration value="KN"/>
+<xs:enumeration value="KP"/>
+<xs:enumeration value="KR"/>
+<xs:enumeration value="KW"/>
+<xs:enumeration value="KY"/>
+<xs:enumeration value="KZ"/>
+<xs:enumeration value="LA"/>
+<xs:enumeration value="LB"/>
+<xs:enumeration value="LC"/>
+<xs:enumeration value="LI"/>
+<xs:enumeration value="LK"/>
+<xs:enumeration value="LR"/>
+<xs:enumeration value="LS"/>
+<xs:enumeration value="LT"/>
+<xs:enumeration value="LU"/>
+<xs:enumeration value="LV"/>
+<xs:enumeration value="LY"/>
+<xs:enumeration value="MA"/>
+<xs:enumeration value="MC"/>
+<xs:enumeration value="MD"/>
+<xs:enumeration value="ME"/>
+<xs:enumeration value="MF"/>
+<xs:enumeration value="MG"/>
+<xs:enumeration value="MH"/>
+<xs:enumeration value="MK"/>
+<xs:enumeration value="ML"/>
+<xs:enumeration value="MM"/>
+<xs:enumeration value="MN"/>
+<xs:enumeration value="MO"/>
+<xs:enumeration value="MP"/>
+<xs:enumeration value="MQ"/>
+<xs:enumeration value="MR"/>
+<xs:enumeration value="MS"/>
+<xs:enumeration value="MT"/>
+<xs:enumeration value="MU"/>
+<xs:enumeration value="MV"/>
+<xs:enumeration value="MW"/>
+<xs:enumeration value="MX"/>
+<xs:enumeration value="MY"/>
+<xs:enumeration value="MZ"/>
+<xs:enumeration value="NA"/>
+<xs:enumeration value="NC"/>
+<xs:enumeration value="NE"/>
+<xs:enumeration value="NF"/>
+<xs:enumeration value="NG"/>
+<xs:enumeration value="NI"/>
+<xs:enumeration value="NL"/>
+<xs:enumeration value="NO"/>
+<xs:enumeration value="NP"/>
+<xs:enumeration value="NR"/>
+<xs:enumeration value="NU"/>
+<xs:enumeration value="NZ"/>
+<xs:enumeration value="OM"/>
+<xs:enumeration value="PA"/>
+<xs:enumeration value="PE"/>
+<xs:enumeration value="PF"/>
+<xs:enumeration value="PG"/>
+<xs:enumeration value="PH"/>
+<xs:enumeration value="PK"/>
+<xs:enumeration value="PL"/>
+<xs:enumeration value="PM"/>
+<xs:enumeration value="PN"/>
+<xs:enumeration value="PR"/>
+<xs:enumeration value="PS"/>
+<xs:enumeration value="PT"/>
+<xs:enumeration value="PW"/>
+<xs:enumeration value="PY"/>
+<xs:enumeration value="QA"/>
+<xs:enumeration value="RE"/>
+<xs:enumeration value="RO"/>
+<xs:enumeration value="RS"/>
+<xs:enumeration value="RU"/>
+<xs:enumeration value="RW"/>
+<xs:enumeration value="SA"/>
+<xs:enumeration value="SB"/>
+<xs:enumeration value="SC"/>
+<xs:enumeration value="SD"/>
+<xs:enumeration value="SE"/>
+<xs:enumeration value="SG"/>
+<xs:enumeration value="SH"/>
+<xs:enumeration value="SI"/>
+<xs:enumeration value="SJ"/>
+<xs:enumeration value="SK"/>
+<xs:enumeration value="SL"/>
+<xs:enumeration value="SM"/>
+<xs:enumeration value="SN"/>
+<xs:enumeration value="SO"/>
+<xs:enumeration value="SR"/>
+<xs:enumeration value="SS"/>
+<xs:enumeration value="ST"/>
+<xs:enumeration value="SV"/>
+<xs:enumeration value="SX"/>
+<xs:enumeration value="SY"/>
+<xs:enumeration value="SZ"/>
+<xs:enumeration value="TC"/>
+<xs:enumeration value="TD"/>
+<xs:enumeration value="TF"/>
+<xs:enumeration value="TG"/>
+<xs:enumeration value="TH"/>
+<xs:enumeration value="TJ"/>
+<xs:enumeration value="TK"/>
+<xs:enumeration value="TL"/>
+<xs:enumeration value="TM"/>
+<xs:enumeration value="TN"/>
+<xs:enumeration value="TO"/>
+<xs:enumeration value="TR"/>
+<xs:enumeration value="TT"/>
+<xs:enumeration value="TV"/>
+<xs:enumeration value="TW"/>
+<xs:enumeration value="TZ"/>
+<xs:enumeration value="UA"/>
+<xs:enumeration value="UG"/>
+<xs:enumeration value="UM"/>
+<xs:enumeration value="US"/>
+<xs:enumeration value="UY"/>
+<xs:enumeration value="UZ"/>
+<xs:enumeration value="VA"/>
+<xs:enumeration value="VC"/>
+<xs:enumeration value="VE"/>
+<xs:enumeration value="VG"/>
+<xs:enumeration value="VI"/>
+<xs:enumeration value="VN"/>
+<xs:enumeration value="VU"/>
+<xs:enumeration value="WF"/>
+<xs:enumeration value="WS"/>
+<xs:enumeration value="XK"/>
+<xs:enumeration value="YE"/>
+<xs:enumeration value="YT"/>
+<xs:enumeration value="ZA"/>
+<xs:enumeration value="ZM"/>
+<xs:enumeration value="ZW"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:all>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="placeOfOrigin">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Place of origin</en>
+<de>Heimatort</de>
+<fr>Lieu d’origine</fr>
+<it>Luogo d’origine</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="dateOfBirth">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Geburtsdatum</en>
+<de>Geburtsdatum</de>
+<fr>Date de naissance</fr>
+<it>Geburtsdatum</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="residence">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="selectType">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Wohnsitz</en>
+<de>Wohnsitz</de>
+<fr>Domicile</fr>
+<it>Wohnsitz</it>
+</label>
+<description>
+<en>Ist die Person bereits verstorben, geben Sie bitte den letzten Wohnsitz ein.</en>
+<de>Ist die Person bereits verstorben, geben Sie bitte den letzten Wohnsitz ein.</de>
+<fr>Ist die Person bereits verstorben, geben Sie bitte den letzten Wohnsitz ein.</fr>
+<it>Ist die Person bereits verstorben, geben Sie bitte den letzten Wohnsitz ein.</it>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="noSpec"/>
+<xs:enumeration value="switzerland"/>
+<xs:enumeration value="foreign"/>
+<xs:enumeration value="unknown"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="addressSwitzerland">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="addressLine1">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>c/o</en>
+<de>Adresszusatz (z.B. "c/o" oder "Lokalität")</de>
+<fr>Complément d'adresse (par ex. "c/o" ou "localité")</fr>
+<it>c/o</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="street">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Street</en>
+<de>Strasse</de>
+<fr>Rue</fr>
+<it>Via</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="houseNumber">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Nr.</en>
+<de>Nr.</de>
+<fr>No.</fr>
+<it>Nr.</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>ACHTUNG: Wird nur für die UID-Schnittstelle benötigt. Bei der Erfassung über Formulare wird die Hausnummer ins Feld "Strasse" eingetragen.</div><div> </div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="swissZipCode">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>PLZ</en>
+<de>PLZ</de>
+<fr>NPA</fr>
+<it>PLZ</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" name="town">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Town</en>
+<de>Ort</de>
+<fr>Lieu</fr>
+<it>Luogo</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="de"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="fr"><div><div>eCH-0010</div></div></xs:documentation>
+<xs:documentation xml:lang="it"><div><div>eCH-0010</div></div></xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="addressForeign">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="addressCustomText">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Adresse</en>
+<de>Adresse</de>
+<fr>Adresse</fr>
+<it>Adresse</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" name="country">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Staat</en>
+<de>Staat</de>
+<fr>État</fr>
+<it>Staat</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:complexType>
+<xs:all>
+<xs:element name="isoCode">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="AD"/>
+<xs:enumeration value="AE"/>
+<xs:enumeration value="AF"/>
+<xs:enumeration value="AG"/>
+<xs:enumeration value="AI"/>
+<xs:enumeration value="AL"/>
+<xs:enumeration value="AM"/>
+<xs:enumeration value="AN"/>
+<xs:enumeration value="AO"/>
+<xs:enumeration value="AQ"/>
+<xs:enumeration value="AR"/>
+<xs:enumeration value="AS"/>
+<xs:enumeration value="AT"/>
+<xs:enumeration value="AU"/>
+<xs:enumeration value="AW"/>
+<xs:enumeration value="AX"/>
+<xs:enumeration value="AZ"/>
+<xs:enumeration value="BA"/>
+<xs:enumeration value="BB"/>
+<xs:enumeration value="BD"/>
+<xs:enumeration value="BE"/>
+<xs:enumeration value="BF"/>
+<xs:enumeration value="BG"/>
+<xs:enumeration value="BH"/>
+<xs:enumeration value="BI"/>
+<xs:enumeration value="BJ"/>
+<xs:enumeration value="BL"/>
+<xs:enumeration value="BM"/>
+<xs:enumeration value="BN"/>
+<xs:enumeration value="BO"/>
+<xs:enumeration value="BQ"/>
+<xs:enumeration value="BR"/>
+<xs:enumeration value="BS"/>
+<xs:enumeration value="BT"/>
+<xs:enumeration value="BV"/>
+<xs:enumeration value="BW"/>
+<xs:enumeration value="BY"/>
+<xs:enumeration value="BZ"/>
+<xs:enumeration value="CA"/>
+<xs:enumeration value="CC"/>
+<xs:enumeration value="CD"/>
+<xs:enumeration value="CF"/>
+<xs:enumeration value="CG"/>
+<xs:enumeration value="CH"/>
+<xs:enumeration value="CI"/>
+<xs:enumeration value="CK"/>
+<xs:enumeration value="CL"/>
+<xs:enumeration value="CM"/>
+<xs:enumeration value="CN"/>
+<xs:enumeration value="CO"/>
+<xs:enumeration value="CR"/>
+<xs:enumeration value="CU"/>
+<xs:enumeration value="CV"/>
+<xs:enumeration value="CW"/>
+<xs:enumeration value="CX"/>
+<xs:enumeration value="CY"/>
+<xs:enumeration value="CZ"/>
+<xs:enumeration value="DE"/>
+<xs:enumeration value="DJ"/>
+<xs:enumeration value="DK"/>
+<xs:enumeration value="DM"/>
+<xs:enumeration value="DO"/>
+<xs:enumeration value="DZ"/>
+<xs:enumeration value="EC"/>
+<xs:enumeration value="EE"/>
+<xs:enumeration value="EG"/>
+<xs:enumeration value="EH"/>
+<xs:enumeration value="ER"/>
+<xs:enumeration value="ES"/>
+<xs:enumeration value="ET"/>
+<xs:enumeration value="FI"/>
+<xs:enumeration value="FJ"/>
+<xs:enumeration value="FK"/>
+<xs:enumeration value="FM"/>
+<xs:enumeration value="FO"/>
+<xs:enumeration value="FR"/>
+<xs:enumeration value="GA"/>
+<xs:enumeration value="GB"/>
+<xs:enumeration value="GD"/>
+<xs:enumeration value="GE"/>
+<xs:enumeration value="GF"/>
+<xs:enumeration value="GG"/>
+<xs:enumeration value="GH"/>
+<xs:enumeration value="GI"/>
+<xs:enumeration value="GL"/>
+<xs:enumeration value="GM"/>
+<xs:enumeration value="GN"/>
+<xs:enumeration value="GP"/>
+<xs:enumeration value="GQ"/>
+<xs:enumeration value="GR"/>
+<xs:enumeration value="GS"/>
+<xs:enumeration value="GT"/>
+<xs:enumeration value="GU"/>
+<xs:enumeration value="GW"/>
+<xs:enumeration value="GY"/>
+<xs:enumeration value="HK"/>
+<xs:enumeration value="HM"/>
+<xs:enumeration value="HN"/>
+<xs:enumeration value="HR"/>
+<xs:enumeration value="HT"/>
+<xs:enumeration value="HU"/>
+<xs:enumeration value="ID"/>
+<xs:enumeration value="IE"/>
+<xs:enumeration value="IL"/>
+<xs:enumeration value="IM"/>
+<xs:enumeration value="IN"/>
+<xs:enumeration value="IO"/>
+<xs:enumeration value="IQ"/>
+<xs:enumeration value="IR"/>
+<xs:enumeration value="IS"/>
+<xs:enumeration value="IT"/>
+<xs:enumeration value="JE"/>
+<xs:enumeration value="JM"/>
+<xs:enumeration value="JO"/>
+<xs:enumeration value="JP"/>
+<xs:enumeration value="KE"/>
+<xs:enumeration value="KG"/>
+<xs:enumeration value="KH"/>
+<xs:enumeration value="KI"/>
+<xs:enumeration value="KM"/>
+<xs:enumeration value="KN"/>
+<xs:enumeration value="KP"/>
+<xs:enumeration value="KR"/>
+<xs:enumeration value="KW"/>
+<xs:enumeration value="KY"/>
+<xs:enumeration value="KZ"/>
+<xs:enumeration value="LA"/>
+<xs:enumeration value="LB"/>
+<xs:enumeration value="LC"/>
+<xs:enumeration value="LI"/>
+<xs:enumeration value="LK"/>
+<xs:enumeration value="LR"/>
+<xs:enumeration value="LS"/>
+<xs:enumeration value="LT"/>
+<xs:enumeration value="LU"/>
+<xs:enumeration value="LV"/>
+<xs:enumeration value="LY"/>
+<xs:enumeration value="MA"/>
+<xs:enumeration value="MC"/>
+<xs:enumeration value="MD"/>
+<xs:enumeration value="ME"/>
+<xs:enumeration value="MF"/>
+<xs:enumeration value="MG"/>
+<xs:enumeration value="MH"/>
+<xs:enumeration value="MK"/>
+<xs:enumeration value="ML"/>
+<xs:enumeration value="MM"/>
+<xs:enumeration value="MN"/>
+<xs:enumeration value="MO"/>
+<xs:enumeration value="MP"/>
+<xs:enumeration value="MQ"/>
+<xs:enumeration value="MR"/>
+<xs:enumeration value="MS"/>
+<xs:enumeration value="MT"/>
+<xs:enumeration value="MU"/>
+<xs:enumeration value="MV"/>
+<xs:enumeration value="MW"/>
+<xs:enumeration value="MX"/>
+<xs:enumeration value="MY"/>
+<xs:enumeration value="MZ"/>
+<xs:enumeration value="NA"/>
+<xs:enumeration value="NC"/>
+<xs:enumeration value="NE"/>
+<xs:enumeration value="NF"/>
+<xs:enumeration value="NG"/>
+<xs:enumeration value="NI"/>
+<xs:enumeration value="NL"/>
+<xs:enumeration value="NO"/>
+<xs:enumeration value="NP"/>
+<xs:enumeration value="NR"/>
+<xs:enumeration value="NU"/>
+<xs:enumeration value="NZ"/>
+<xs:enumeration value="OM"/>
+<xs:enumeration value="PA"/>
+<xs:enumeration value="PE"/>
+<xs:enumeration value="PF"/>
+<xs:enumeration value="PG"/>
+<xs:enumeration value="PH"/>
+<xs:enumeration value="PK"/>
+<xs:enumeration value="PL"/>
+<xs:enumeration value="PM"/>
+<xs:enumeration value="PN"/>
+<xs:enumeration value="PR"/>
+<xs:enumeration value="PS"/>
+<xs:enumeration value="PT"/>
+<xs:enumeration value="PW"/>
+<xs:enumeration value="PY"/>
+<xs:enumeration value="QA"/>
+<xs:enumeration value="RE"/>
+<xs:enumeration value="RO"/>
+<xs:enumeration value="RS"/>
+<xs:enumeration value="RU"/>
+<xs:enumeration value="RW"/>
+<xs:enumeration value="SA"/>
+<xs:enumeration value="SB"/>
+<xs:enumeration value="SC"/>
+<xs:enumeration value="SD"/>
+<xs:enumeration value="SE"/>
+<xs:enumeration value="SG"/>
+<xs:enumeration value="SH"/>
+<xs:enumeration value="SI"/>
+<xs:enumeration value="SJ"/>
+<xs:enumeration value="SK"/>
+<xs:enumeration value="SL"/>
+<xs:enumeration value="SM"/>
+<xs:enumeration value="SN"/>
+<xs:enumeration value="SO"/>
+<xs:enumeration value="SR"/>
+<xs:enumeration value="SS"/>
+<xs:enumeration value="ST"/>
+<xs:enumeration value="SV"/>
+<xs:enumeration value="SX"/>
+<xs:enumeration value="SY"/>
+<xs:enumeration value="SZ"/>
+<xs:enumeration value="TC"/>
+<xs:enumeration value="TD"/>
+<xs:enumeration value="TF"/>
+<xs:enumeration value="TG"/>
+<xs:enumeration value="TH"/>
+<xs:enumeration value="TJ"/>
+<xs:enumeration value="TK"/>
+<xs:enumeration value="TL"/>
+<xs:enumeration value="TM"/>
+<xs:enumeration value="TN"/>
+<xs:enumeration value="TO"/>
+<xs:enumeration value="TR"/>
+<xs:enumeration value="TT"/>
+<xs:enumeration value="TV"/>
+<xs:enumeration value="TW"/>
+<xs:enumeration value="TZ"/>
+<xs:enumeration value="UA"/>
+<xs:enumeration value="UG"/>
+<xs:enumeration value="UM"/>
+<xs:enumeration value="US"/>
+<xs:enumeration value="UY"/>
+<xs:enumeration value="UZ"/>
+<xs:enumeration value="VA"/>
+<xs:enumeration value="VC"/>
+<xs:enumeration value="VE"/>
+<xs:enumeration value="VG"/>
+<xs:enumeration value="VI"/>
+<xs:enumeration value="VN"/>
+<xs:enumeration value="VU"/>
+<xs:enumeration value="WF"/>
+<xs:enumeration value="WS"/>
+<xs:enumeration value="XK"/>
+<xs:enumeration value="YE"/>
+<xs:enumeration value="YT"/>
+<xs:enumeration value="ZA"/>
+<xs:enumeration value="ZM"/>
+<xs:enumeration value="ZW"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:all>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="date">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Datum</en>
+<de>Datum</de>
+<fr>Date</fr>
+<it>Datum</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="time">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Time</en>
+<de>Zeit</de>
+<fr>Heure</fr>
+<it>Ora</it>
+</label>
+<description>
+<en>Time in hours and minutes (HH:MM)</en>
+<de>Eingabe in Stunden und Minuten (HH:MM)</de>
+<fr>Saisie en heures et minutes (HH:MM)</fr>
+<it>In ore e minuti (HH:MM)</it>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="dateFrom">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Datum von</en>
+<de>Datum von</de>
+<fr>Date de</fr>
+<it>Datum von</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="dateTo">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Datum bis</en>
+<de>Datum bis</de>
+<fr>Date jusqu'à</fr>
+<it>Datum bis</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="reaction">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="legalComponent">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>LegalComponent Ja/Nein</en>
+<de>LegalComponent Ja/Nein</de>
+<fr>LegalComponent Ja/Nein</fr>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:long">
+<xs:minInclusive value="-9007199254740991"/>
+<xs:maxInclusive value="9007199254740991"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="element">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="legalRemedy">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Rechtsmittel / Einsichtnahme</en>
+<de>Rechtsmittel / Einsichtnahme</de>
+<fr>Moyen de droit / Consultation</fr>
+<it>Rechtsmittel / Einsichtnahme</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Rechtsmittel / Einsichtnahme (Übersetzung)</en>
+<de>Rechtsmittel / Einsichtnahme (Übersetzung)</de>
+<fr>Moyen de droit / Consultation (traduction)</fr>
+<it>Rechtsmittel / Einsichtnahme (Übersetzung)</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="contact">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Kontaktstelle</en>
+<de>Kontaktstelle</de>
+<fr>Point de contact</fr>
+<it>Kontaktstelle</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Kontaktstelle (Übersetzung)</en>
+<de>Kontaktstelle (Übersetzung)</de>
+<fr>Point de contact (traduction)</fr>
+<it>Kontaktstelle (Übersetzung)</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="1" maxOccurs="unbounded" name="deadline">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="selectType">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Frist</en>
+<de>Frist</de>
+<fr>Délai</fr>
+<it>Frist</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="date"/>
+<xs:enumeration value="dateFromTo"/>
+<xs:enumeration value="days"/>
+<xs:enumeration value="months"/>
+<xs:enumeration value="no-deadline"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="term">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Bezeichnung der Frist</en>
+<de>Bezeichnung der Frist</de>
+<fr>Intitulé du délai</fr>
+<it>Bezeichnung der Frist</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Bezeichnung der Frist (Übersetzung)</en>
+<de>Bezeichnung der Frist (Übersetzung)</de>
+<fr>Intitulé du délai (traduction)</fr>
+<it>Bezeichnung der Frist (Übersetzung)</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="dateFrom">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Frist von</en>
+<de>Frist von</de>
+<fr>Délai de</fr>
+<it>Frist von</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="dateTo">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Frist bis</en>
+<de>Frist bis</de>
+<fr>Délai jusqu'au</fr>
+<it>Frist bis</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" name="days">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>or days after publication</en>
+<de>Tage nach Publikation</de>
+<fr>Jours après la publication</fr>
+<it>o giorni dopo la pubblicazione</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:long">
+<xs:minInclusive value="-9007199254740991"/>
+<xs:maxInclusive value="9007199254740991"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element minOccurs="0" name="months">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Monate nach Publikation</en>
+<de>Monate nach Publikation</de>
+<fr>Mois après la publication</fr>
+<it>Monate nach Publikation</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:long">
+<xs:minInclusive value="-9007199254740991"/>
+<xs:maxInclusive value="9007199254740991"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element type="xs:date" minOccurs="0" name="date">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>Ablaufdatum der Frist</en>
+<de>Ablaufdatum der Frist</de>
+<fr>Date d'expiration du délai</fr>
+<it>Ablaufdatum der Frist</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="1" maxOccurs="unbounded" name="localization">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="municipalityId">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="key">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>key</en>
+<de>key</de>
+<fr>key</fr>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="term">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" minOccurs="0" name="de">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>key</en>
+<de>key</de>
+<fr>key</fr>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="fr">
+<xs:annotation>
+<xs:appinfo>
+<label>
+<en>key</en>
+<de>key</de>
+<fr>key</fr>
+<it>Label</it>
+</label>
+<description>
+<en/>
+<de/>
+<fr/>
+<it/>
+</description>
+</xs:appinfo>
+<xs:documentation xml:lang="en"/>
+<xs:documentation xml:lang="de"/>
+<xs:documentation xml:lang="fr"/>
+<xs:documentation xml:lang="it"/>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="metaType">
+<xs:annotation>
+<xs:documentation xml:lang="de">(de)Metadata of the publication</xs:documentation>
+<xs:documentation xml:lang="fr">(fr)Metadata of the publication</xs:documentation>
+<xs:documentation xml:lang="it">(it)Metadata of the publication</xs:documentation>
+<xs:documentation xml:lang="en">Metadata of the publication</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="subRubricCode">
+<xs:annotation>
+<xs:documentation xml:lang="de">(de)The unique code of the sub-rubric.</xs:documentation>
+<xs:documentation xml:lang="fr">(fr)The unique code of the sub-rubric.</xs:documentation>
+<xs:documentation xml:lang="it">(it)The unique code of the sub-rubric.</xs:documentation>
+<xs:documentation xml:lang="en">The unique code of the sub-rubric.</xs:documentation>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="BU-SO25"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="language">
+<xs:annotation>
+<xs:documentation xml:lang="de">(de)Then language of the publication, given by one of these values: de, fr, it, en.</xs:documentation>
+<xs:documentation xml:lang="fr">(fr)Then language of the publication, given by one of these values: de, fr, it, en.</xs:documentation>
+<xs:documentation xml:lang="it">(it)Then language of the publication, given by one of these values: de, fr, it, en.</xs:documentation>
+<xs:documentation xml:lang="en">Then language of the publication, given by one of these values: de, fr, it, en.</xs:documentation>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="de"/>
+<xs:enumeration value="fr"/>
+<xs:enumeration value="it"/>
+<xs:enumeration value="en"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element type="xs:date" name="publicationDate">
+<xs:annotation>
+<xs:documentation xml:lang="de">(de)The publication date.</xs:documentation>
+<xs:documentation xml:lang="fr">(fr)The publication date.</xs:documentation>
+<xs:documentation xml:lang="it">(it)The publication date.</xs:documentation>
+<xs:documentation xml:lang="en">The publication date.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="invoiceAddressId">
+<xs:annotation>
+<xs:documentation xml:lang="de">(de)Id of the registration offices invoice address.</xs:documentation>
+<xs:documentation xml:lang="fr">(fr)Id of the registration offices invoice address.</xs:documentation>
+<xs:documentation xml:lang="it">(it)Id of the registration offices invoice address.</xs:documentation>
+<xs:documentation xml:lang="en">Id of the registration offices invoice address.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="publicationNumber">
+<xs:annotation>
+<xs:documentation xml:lang="de">(de)A unique number that helps to identify the publication.</xs:documentation>
+<xs:documentation xml:lang="fr">(fr)A unique number that helps to identify the publication.</xs:documentation>
+<xs:documentation xml:lang="it">(it)A unique number that helps to identify the publication.</xs:documentation>
+<xs:documentation xml:lang="en">A unique number that helps to identify the publication.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element minOccurs="0" maxOccurs="27" name="cantons">
+<xs:annotation>
+<xs:documentation xml:lang="de">(de)The cantons of a publication.<br/>Values: all canton codes</xs:documentation>
+<xs:documentation xml:lang="fr">(fr)The cantons of a publication.<br/>Values: all canton codes</xs:documentation>
+<xs:documentation xml:lang="it">(it)The cantons of a publication.<br/>Values: all canton codes</xs:documentation>
+<xs:documentation xml:lang="en">The cantons of a publication.<br/>Values: all canton codes</xs:documentation>
+</xs:annotation>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="AG"/>
+<xs:enumeration value="AI"/>
+<xs:enumeration value="AR"/>
+<xs:enumeration value="BE"/>
+<xs:enumeration value="BL"/>
+<xs:enumeration value="BS"/>
+<xs:enumeration value="DA"/>
+<xs:enumeration value="FR"/>
+<xs:enumeration value="GE"/>
+<xs:enumeration value="GL"/>
+<xs:enumeration value="GR"/>
+<xs:enumeration value="JU"/>
+<xs:enumeration value="LU"/>
+<xs:enumeration value="NE"/>
+<xs:enumeration value="NW"/>
+<xs:enumeration value="OW"/>
+<xs:enumeration value="SG"/>
+<xs:enumeration value="SH"/>
+<xs:enumeration value="SO"/>
+<xs:enumeration value="SZ"/>
+<xs:enumeration value="TG"/>
+<xs:enumeration value="TI"/>
+<xs:enumeration value="UR"/>
+<xs:enumeration value="VD"/>
+<xs:enumeration value="VS"/>
+<xs:enumeration value="ZG"/>
+<xs:enumeration value="ZH"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="dossierReference">
+<xs:annotation>
+<xs:documentation xml:lang="de">(de)The dossier reference.</xs:documentation>
+<xs:documentation xml:lang="fr">(fr)The dossier reference.</xs:documentation>
+<xs:documentation xml:lang="it">(it)The dossier reference.</xs:documentation>
+<xs:documentation xml:lang="en">The dossier reference.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:date" name="expirationDate">
+<xs:annotation>
+<xs:documentation xml:lang="de">(de)The publications expiration date.</xs:documentation>
+<xs:documentation xml:lang="fr">(fr)The publications expiration date.</xs:documentation>
+<xs:documentation xml:lang="it">(it)The publications expiration date.</xs:documentation>
+<xs:documentation xml:lang="en">The publications expiration date.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element type="xs:string" minOccurs="0" name="onBehalfOf">
+<xs:annotation>
+<xs:documentation xml:lang="de">(de)The publications on behalf of field.</xs:documentation>
+<xs:documentation xml:lang="fr">(fr)The publications on behalf of field.</xs:documentation>
+<xs:documentation xml:lang="it">(it)The publications on behalf of field.</xs:documentation>
+<xs:documentation xml:lang="en">The publications on behalf of field.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="publicationType">
+<xs:sequence>
+<xs:element type="metaType" name="meta"/>
+<xs:element type="contentType" name="content"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="localizedStringType">
+<xs:all>
+<xs:element type="xs:string" minOccurs="0" name="en"/>
+<xs:element type="xs:string" minOccurs="0" name="de"/>
+<xs:element type="xs:string" minOccurs="0" name="fr"/>
+<xs:element type="xs:string" minOccurs="0" name="it"/>
+</xs:all>
+</xs:complexType>
+<xs:element type="localizedStringType" name="label"/>
+<xs:element type="localizedStringType" name="description"/>
+</xs:schema>
