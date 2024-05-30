@@ -1,7 +1,7 @@
 # publication-standard
 
 > [!TIP]
-> To get a better understanding of the interaction of the individual artifacts, it is recommended to read "Big Picture" first.
+> To get a better understanding of the interaction between the individual artifacts, it is recommended to read ["Big Picture"](https://github.com/officialgazette/big-picture) first.
 
 The future publication standard (occasionally referred to as "Standard 2.0") can be described as the centrepiece of the official gazette portal. The standard to be established essentially involves a new, generic schema.
 
