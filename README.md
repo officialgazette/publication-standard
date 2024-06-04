@@ -38,10 +38,11 @@ block-beta
 
 block:scope["Scope"]
 
-columns 5
-Meta:2 space Terms["Terminology
-catalogue"]:2 space:5 Content:2
-space:7
+columns 3
+Meta space Terms["Specific terms"]
+space:3
+Content space Catalogue["Terminology catalogue"]
+space:3
 
 end
 
