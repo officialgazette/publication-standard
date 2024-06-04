@@ -24,7 +24,7 @@ In recent years, various preparatory work has been carried out for the introduct
 
 ## Requirements for future standardisation
 
-[Publication standard](https://github.com/officialgazette/publication-standard).
+[Publication standard](https://github.com/officialgazette/publication-standard/blob/main/standard_schema.xsd).
 ### Scope of the standardisation
 ```mermaid
 
