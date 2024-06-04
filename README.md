@@ -24,7 +24,7 @@ In recent years, various preparatory work has been carried out for the introduct
 
 
 
-## The Scope of the Standard
+## The scope of the Standard
 The future standard consists of various elements to be standardized.
 * **The structure of a publication**: Describes the basic structure of how a publication is organized and can be requested and submitted via the API.
   A distinction must be made between
