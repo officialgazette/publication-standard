@@ -36,7 +36,7 @@ The future standard consists of various elements to be standardized.
 * **The general terms catalogue:** The collection of general terms (also referred to as the term database) includes all terms that can be used in publication types. These terms are maintained in German, French, Italian and English and have a unique key.
 
 > [!TIP]
-> In the existing solution, the terms catalog is available in JSON format, see here. This catalog can and should be revised as part of the new concept.
+> In the existing solution, the terms catalog is available in JSON format, [see here](https://github.com/officialgazette/publication-standard/blob/main/root.json). This catalog can and should be revised as part of the new concept.
 
 * **Publisher-specific configurations:** Publishers of an official gazette should be able to configure their publication types autonomously. The exchange of this configuration should also be standardized.
 These configurations include in particular
