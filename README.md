@@ -1,9 +1,17 @@
 # The publication standard
 
+The future publication standard (occasionally referred to as "Standard 2.0") can be considered as the centrepiece of the official gazette portal.
+
 > [!TIP]
 > To get a better understanding of the interaction between the individual artifacts, it is recommended to read ["Big Picture"](https://github.com/officialgazette/big-picture) first.
 
-The future publication standard (occasionally referred to as "Standard 2.0") can be described as the centrepiece of the official gazette portal. The standard to be established essentially involves a new, generic schema.
+> [!IMPORTANT]
+> The existing concepts and artifacts should be challenged and revised. An optimal standard is to be drafted as part of the tender. In particular, it should
+>- ensure the interoperability of the future system
+>- be scalable (e.g. with regard to the inclusion of new tenants or new publication types)
+>- be developer-friendly 
+
+
 
 ## Why a standard?
 
@@ -25,28 +33,8 @@ In recent years, various preparatory work has been carried out for the introduct
 
 
 ## The scope of the Standard
-The future standard consists of various elements to be standardized.
-* **The structure of a publication**: Describes the basic structure of how a publication is organized and can be requested and submitted via the API.
-  A distinction must be made between
-  
-    * The meta data: Meta data should be as identical as possible for each publication type, and they should be used for both expired (possibly archived) and future publications.
-  
-    * The content data: Content data varies significantly depending on the type of publication. Therefore, a solution had to be found to keep the basic structure stable but adapt the actual content data for each publication type. 
-  
-* **The general terms catalogue:** The collection of general terms (also referred to as the term database) includes all terms that can be used in publication types. These terms are maintained in German, French, Italian and English and have a unique key.
+The field of action with regard to standardization comprises various aspects and artefacts. The following overview shows which artifacts are expected for the future standard.
 
-> [!TIP]
-> In the existing solution, the terms catalog is available in JSON format, [see here](https://github.com/officialgazette/publication-standard/blob/main/root.json). The file is structured in a publication type-centered manner. but this concept should be challenged. The catalog structure can and should be revised as part of the new concept.
-
-* **Publisher-specific configurations:** Publishers of an official gazette should be able to configure their publication types autonomously. The exchange of this configuration should also be standardized.
-These configurations include in particular
-- Assignment and editing of preconfigured default publication types from the term database
-- Individualization of publication type naming
-- Individualization of term naming
-- Legal remedies of the specific publication types
-- Publication period
-- Archiving requirements
-  
 ```mermaid
 
 %%{
@@ -60,9 +48,12 @@ block-beta
 block:scope["Scope"]
 
 columns 3
-block:1
+block:standard["Standard
+of publication"]:1
 columns 1
 Meta
+space
+space
 Content
 end
 Meta space Terms["Specific configuration"]
@@ -70,7 +61,6 @@ space:3
 Content space termDB[("
 Term
 Database")]
-space:3
 
 end
 
@@ -79,6 +69,34 @@ end
 Terms --> Content
 termDB --> Terms
 ```
+The individual artifacts are described in detail as follows.
+
+### The structure of a publication
+Describes the basic structure of how a publication is organized and can be requested and submitted via the API. A distinction must be made between
+
+* The meta data: Meta data should be as identical as possible for each publication type, and they should be used for both expired (possibly archived) and future publications.
+
+* The content data: Content data varies significantly depending on the type of publication. Therefore, a solution had to be found to keep the basic structure stable but adapt the actual content data for each publication type.
+ 
+> [!TIP]
+> In the existing solution, the structure schema is available in XSD format, [see here](https://github.com/officialgazette/publication-standard/blob/main/publication_schema.xsd).
+  
+### The general terms catalogue 
+The collection of general terms (also referred to as the term database) includes all terms that can be used in publication types. These terms are maintained in German, French, Italian and English and have a unique key.
+
+> [!TIP]
+> In the existing solution, the terms catalog is available in JSON format, [see here](https://github.com/officialgazette/publication-standard/blob/main/root.json). The file is structured in a publication type-centered manner. but this concept should be challenged. The catalog structure can and should be revised as part of the new concept.
+
+* **Publisher-specific configurations:** Publishers of an official gazette should be able to configure their publication types autonomously. The exchange of this configuration should also be standardized.
+These configurations include in particular
+  - Assignment and editing of preconfigured default publication types from the term database
+  - Individualization of publication type naming
+  - Individualization of term naming
+  - Legal remedies of the specific publication types
+  - Publication period
+  - Archiving requirements
+  
+
 
 ## Requirements for future standardisation
 
