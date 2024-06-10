@@ -177,7 +177,6 @@ A term object ("term") contains various information and is structured as follows
 ```
 {
 "key" : "constructionProject",
-"type" : "businessCase",
 "valueType" : "text",
 "term" : {
   "de" : "Planning application",
