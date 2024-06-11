@@ -183,6 +183,6 @@ These configurations include in particular
   - Publication period
   - Archiving requirements
 
-An example of a current client-specific configuration (Canton Valais) can be found (here)[https://amtsblattportal.ch/terms/kabvs]
+An example of a current client-specific configuration (Canton Valais) can be found [here](https://amtsblattportal.ch/terms/kabvs)
 
 
