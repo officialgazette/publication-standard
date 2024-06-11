@@ -22,18 +22,18 @@ The growing number of official publications in the official gazette portal shows
 - The schemes are easier to read once the basic principles have been understood.
 - The new publication structure should follow universal semantics that apply to all publication types. Wherever possible, the schema structure should be based on existing eCH standards.
 
-## Considerations regarding the standard
+## Considerations regarding the existing schema
 
 In recent years, various preparatory work has been carried out for the introduction of a new, holistic standard. In particular
 
 * A minimum set of metadata common to all publications was defined. This set enables (and should enable in a future solution) a standardised search of both published and archived publications. Information regarding the existing meta data schema can be found [here](https://amtsblattportal.ch/docs/api/#_api_reference).
 
-* a generic structure for message content was created. This makes it possible to deliver and obtain publications of very different types and from several public authorities in a standardised structure.
+* a generic structure for message content was created. This makes it possible to deliver and obtain publications of very different types and from several public authorities in a standardised structure. More Information regarding the generic content structure can be found [here](https://amtsblattportal.ch/docs/api/#_publication_schema_2_0).
 
 
 
 ## The scope of the Standard
-The field of action with regard to standardization comprises various aspects and artefacts. The following overview shows which artifacts are expected for the future standard.
+The field of action with regard to standardization comprises various aspects. The following overview shows which artifacts are expected for the future standard.
 
 ```mermaid
 
@@ -56,7 +56,8 @@ space
 space
 Content
 end
-Meta space Terms["Specific configuration"]
+Meta space Terms["Tenant
+specific configuration"]
 space:3
 Content space termDB[("
 Term
@@ -71,7 +72,7 @@ termDB --> Terms
 ```
 The individual artifacts are described in detail as follows.
 
-### The structure of a publication
+### The general structure of a publication
 
 > [!TIP]
 > In the existing solution, the structure schema is available in XSD format, [see here](https://github.com/officialgazette/publication-standard/blob/main/publication_schema.xsd).
@@ -83,14 +84,13 @@ The structure of the publication describes how a publication is organized and ca
 * The content data: Content data varies significantly depending on the type of publication. Therefore, a solution had to be found to keep the basic structure stable but adapt the actual content data for each publication type.
 
 ### The meta data
-> [!IMPORTANT]
-> The structure and elements described below correspond to the existing exchange format for official publications. For reasons of downward compatibility, it may be a good approach to keep this structure in a future solution or standardisation.
+The structure and elements of the existing meta data schema is documented [here](https://amtsblattportal.ch/docs/api/#_api_reference). For reasons of downward compatibility, it may be a good approach to keep this structure in a future solution/standardisation.
 
-### the content data
-### Semantic structuring
+### The content data
 
-As in Version 1, the schema distinguishes between meta and content elements whereby the meta elements do not change in version 2.0.
-The content element consists of four elements that give the message a semantically usable structure:
+**Semantic structuring**
+
+The current content schema consists of four elements that give the publication a semantically usable structure:
 
 * controls
 
@@ -112,18 +112,15 @@ Describes the business case on which the publication is based.
 
 Describes the possible reactions to a publication
 
-### The content structure
 
-The following figure shows the  content structure of a publication:
+**The content structure**
+
+The following figure shows the content structure of a publication:
 
 ![Schema](https://amtsblattportal.ch/docs/api/images/publication_schema_overview.png)
 
-Each element has an element key and a term in German or French. 
+Each element has an element key and a term in German or French (a future solution should provide Italian and English as well, see "general terms catalogue"). 
 The element is also typified by means of a "valueType" element. The following schema excerpt shows the possible elements.
-
-
-
-
 
 **key:** Contains the key of the term. This uniquely identifies the term, even if the term is renamed on a client-specific basis (for example, a "building application" may be called a "building project", depending on the publication organ).
 
@@ -153,26 +150,13 @@ The element is also typified by means of a "valueType" element. The following sc
 - url
 - attachment
 
-These types are mapped in the XML schema, further information on the structure can be found in the API doc at https://amtsblattportal.ch/docs/api.
+These types are mapped in the XML schema, further information on the structure can be found in the [API doc of the official gazette portal](https://amtsblattportal.ch/docs/api).
   
-### The general terms catalogue 
+### The terms catalogue 
 The collection of general terms (also referred to as the term database) includes all terms that can be used in publication types. These terms are maintained in German, French, Italian and English and have a unique key.
 
-> [!TIP]
-> In the existing solution, the terms catalog is available in JSON format, [see here](https://github.com/officialgazette/publication-standard/blob/main/root.json). The file is structured in a publication type-centered manner. but this concept should be challenged. The catalog structure can and should be revised as part of the new concept.
-
-* **Publisher-specific configurations:** Publishers of an official gazette should be able to configure their publication types autonomously. The exchange of this configuration should also be standardized.
-These configurations include in particular
-  - Assignment and editing of preconfigured default publication types from the term database
-  - Individualization of publication type naming
-  - Individualization of term naming
-  - Legal remedies of the specific publication types
-  - Publication period
-  - Archiving requirements
-
-
-### The terminology catalogue
-All terms used in a specific publication are stored in a neutral terminology catalogue. This can currently be accessed in JSON format at the following URL: https://amtsblattportal.ch/terms 
+**Structure of a term**
+The terms catalogue can currently be accessed in JSON format at the following URL: https://amtsblattportal.ch/terms 
 A term object ("term") contains various information and is structured as follows:
 ```
 {
@@ -186,9 +170,19 @@ A term object ("term") contains various information and is structured as follows
 ```
 
 
-### The content
+> [!TIP]
+> In the existing solution, the terms catalog is structured in a publication type-centered manner. This concept should be challenged. The catalog structure can and should be revised as part of the new concept.
 
+### Tenant-specific configurations
+Publishers of an official gazette should be able to configure their publication types autonomously. The exchange of this configuration should also be standardized.
+These configurations include in particular
+  - Assignment and editing of preconfigured default publication types from the term database
+  - Individualization of publication type naming
+  - Individualization of term naming
+  - Legal remedies of the specific publication types
+  - Publication period
+  - Archiving requirements
 
-## The configuration of Publishing types
+An example of a current client-specific configuration (Canton Valais) can be found (here)[https://amtsblattportal.ch/terms/kabvs]
 
 
