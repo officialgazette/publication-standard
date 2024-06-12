@@ -28,6 +28,7 @@ The most important terms regarding the standardisation can briefly be explained 
 > The information on the actual content of a publication can be found in the publication content.
 >
 > **Publication element:**
+> 
 > A publication type is made up of individual elements. Each notification element has a unique key, but different characteristics.
 > Note: In this context, the term “element” should not be confused with the element term in the XML language. For example, an element can be a “private person” or a “company”.
 > For more information on the structure of an element, see “the content structure” below.
@@ -107,7 +108,7 @@ block:content["Structured generic content"]:1
 
 space:6
 
-Element:1
+Elements
 
 end
 archive["Persisted data in temporary file store"]
@@ -215,12 +216,20 @@ A term object ("term") contains various information and is structured as follows
 ### Tenant-specific configurations
 Publishers of an official gazette should be able to configure their publication types autonomously. The exchange of this configuration should also be standardized.
 These configurations include in particular
-  - Assignment and editing of preconfigured default publication types from the term database
+  - Assignment and editing of preconfigured default publication types from the terms catalogue
   - Individualization of publication type naming
-  - Individualization of term naming
+  - The possibility to customize the terms of the publication elements by the tenant (n.b.: in the current solution these terms can be edited by publishing entities when creating the publication)
+  - A Link to a page with further information on the publication type (description, sample publication, etc.)
+  - Text for the individual notification elements (default content) should be provided
   - Legal remedies of the specific publication types
-  - Publication period
-  - Archiving requirements
+  - Which publication fees apply
+  - The publication period
+  - The publication interval (on which days of the week a publication should be published)
+  - Archiving requirements (Is a publication worthy of archiving or can it be deleted)
+  - May published publications be obtained via API
+  - Which elements should be worthy of protection (e.g. which elements may not be available via API, usually personal data)
+  - It should be displayed which official gazettes also use a certain publication type (including external official gazettes)
+  - Further publication type-specific settings
 
 An example of a current client-specific configuration (Canton Valais) can be found [here](https://amtsblattportal.ch/terms/kabvs)
 
