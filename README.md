@@ -75,7 +75,7 @@ end
 Terms --> standard
 termDB --> Terms
 ```
-The individual artifacts are described in detail as follows.
+The individual artifacts are described in the following sections.
 
 ### The general structure of a publication type
 
