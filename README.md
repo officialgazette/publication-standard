@@ -33,14 +33,6 @@ The most important terms regarding the standardisation can briefly be explained 
 > Note: In this context, the term “element” should not be confused with the element term in the XML language. For example, an element can be a “private person” or a “company”.
 > For more information on the structure of an element, see “the content structure” below.
 
-## Why a standard?
-
-The growing number of official publications in the official gazette portal shows that the introduction of a standard that applies to all possible types of publications is unavoidable. A standardised exchange structure offers a number of advantages, such as:
-
-- A uniform standard ensures the interoperability of the system.  It furthermore ensures that the publications remain readable and processable at a future time.
-- The import and export of publications is simplified and each publication type can be processed in the same way.
-- The schemes are easier to read once the basic principles have been understood.
-- The new publication structure should follow universal semantics that apply to all publication types. Wherever possible, the schema structure should be based on existing eCH standards.
 
 ## Considerations regarding the existing schema
 
