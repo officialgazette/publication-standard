@@ -57,7 +57,7 @@ The field of action with regard to standardization comprises various aspects. Th
 
 block-beta
 
-block:scope["Scope"]
+block:scope["Scope of standardization"]
 
 columns 3
 standard["Publication type"]:1
@@ -103,24 +103,27 @@ space:6
 Elements
 
 end
-archive["Persisted data in temporary file store"]
+archive["Persisted publication data in temporary file store"]
 end
 
+style scope stroke:grey,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
 ```
 
+${\color{grey}----}$ **Publication scope:** All the aspects described below form the publication scope
 
-A distinction must be made between
+The structure of a publication type (and thus a publication) in its entirety comprises the following aspects
 
-* The meta data: Meta data should be as identical as possible for each publication type, and they should be used for both expired (possibly archived) and future publications.
+* The publication scope: defines how information in official announcements is structured in general. This is intended to ensure interoperability both across current system boundaries and in temporal terms (compatibility with legacy and future systems).
 
-* The content data: Content data varies significantly depending on the type of publication. Therefore, a solution had to be found to keep the basic structure stable but adapt the actual content data for each publication type.
+* The meta data: Meta data should be as identical as possible for each publication type, and they should be used for both expired (possibly archived) and future publications. The structure and elements of the existing meta data schema is documented [here](https://amtsblattportal.ch/docs/api/#_api_reference). For reasons of downward compatibility, it may be a good approach to keep this structure in a future solution/standardisation.
 
-### The meta data
-The structure and elements of the existing meta data schema is documented [here](https://amtsblattportal.ch/docs/api/#_api_reference). For reasons of downward compatibility, it may be a good approach to keep this structure in a future solution/standardisation.
+* Structured generic content: Content data varies significantly depending on the type of publication. Therefore, a solution had to be found to keep the basic structure stable but adapt the actual content data for each publication type.
 
-### The content data
+* Persisted publication data in temporary file store
+After the publication deadline has expired, publications are moved to the file store or an external archive.
 
-**Semantic structuring**
+
+**Semantic structuring of the content**
 
 The current content schema consists of four elements that give the publication a semantically usable structure:
 
@@ -145,7 +148,7 @@ Describes the business case on which the publication is based.
 Describes the possible reactions to a publication
 
 
-**The content structure**
+**The generic content structure**
 
 The following figure shows the content structure of a publication:
 
