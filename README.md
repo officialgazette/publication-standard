@@ -84,7 +84,7 @@ termDB --> Terms
 ```
 The individual artifacts are described in detail as follows.
 
-### The general structure of a publication
+### The general structure of a publication type
 
 > [!TIP]
 > In the existing solution, the structure schema is available in XSD format, [see here](https://github.com/officialgazette/publication-standard/blob/main/publication_schema.xsd).
@@ -110,7 +110,7 @@ space:6
 Element:1
 
 end
-archive["Persisted data"]
+archive["Persisted data in temporary file store"]
 end
 
 ```
