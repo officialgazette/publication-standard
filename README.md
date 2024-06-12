@@ -1,17 +1,36 @@
 # The publication standard
 
 The future publication standard (occasionally referred to as "Standard 2.0") can be considered as the centrepiece of the official gazette portal.
-
 > [!TIP]
 > To get a better understanding of the interaction between the individual artifacts, it is recommended to read ["Big Picture"](https://github.com/officialgazette/big-picture) first.
 
 > [!IMPORTANT]
-> The existing concepts and artifacts should be challenged and revised. An optimal standard is to be drafted as part of the public tender. In particular, it should
->- ensure the interoperability of the future system
+> The existing concepts and artifacts should be challenged and revised. An optimal publication standard is to be drafted as part of the public tender. In particular, it should
+>- enable a seamless exchange of publications
 >- be scalable (e.g. with regard to the inclusion of new tenants or new publication types)
 >- be developer-friendly 
 
+The most important terms regarding the standardisation can briefly be explained as follows:
 
+> **Publication:** 
+> The announcement to be published or already published in an official gazette. The term publication is also used after publishing.
+>
+> **Publication type:** 
+> A type of a publication. Defined as a blueprint of recurring thematically or structurally identical publications.
+>
+> **Publication standard:**
+> Since the beginning of 2023, efforts have been made to set up new official gazettes on the portal according to a standardized procedure. Building on this basis, a publication standard is to be developed and established with the new solution.
+>
+> **Publication metadata:** 
+> Metadata contains information about the data in the publication content and is descriptive in nature. In the present case, the metadata also serves as a minimum data set for the search index, i.e. metadata can be used to search, regardless of whether it is an old publication in the temporary file store or a valid publication in the core system.
+>
+> **Publication content:** 
+> The information on the actual content of a publication can be found in the publication content.
+>
+> **Publication element:**
+> A publication type is made up of individual elements. Each notification element has a unique key, but different characteristics.
+> Note: In this context, the term “element” should not be confused with the element term in the XML language. For example, an element can be a “private person” or a “company”.
+> For more information on the structure of an element, see “the content structure” below.
 
 ## Why a standard?
 
@@ -33,7 +52,7 @@ In recent years, various preparatory work has been carried out for the introduct
 
 
 ## The scope of the Standard
-The field of action with regard to standardization comprises various aspects. The following overview shows which artifacts are expected for the future standard.
+The field of action with regard to standardization comprises various aspects. The following overview shows Which artifacts are subject to closer consideration regarding for the future standard.
 
 ```mermaid
 
@@ -48,26 +67,19 @@ block-beta
 block:scope["Scope"]
 
 columns 3
-block:standard["Standard
-of publication"]:1
-columns 1
-Meta
-space
-space
-Content
-end
-Meta space Terms["Tenant
+standard["Publication type"]:1
+space Terms["Tenant
 specific configuration"]
 space:3
-Content space termDB[("
+space space termDB[("
 Term
-Database")]
+Catalogue")]
 
 end
 
 
 
-Terms --> Content
+Terms --> standard
 termDB --> Terms
 ```
 The individual artifacts are described in detail as follows.
@@ -77,7 +89,34 @@ The individual artifacts are described in detail as follows.
 > [!TIP]
 > In the existing solution, the structure schema is available in XSD format, [see here](https://github.com/officialgazette/publication-standard/blob/main/publication_schema.xsd).
 
-The structure of the publication describes how a publication is organized and can be requested and submitted via the API. A distinction must be made between
+The structure of the publication describes how a publication is organized and can be requested and submitted via the API. 
+
+```mermaid
+
+%%{
+  init: {
+    'theme': 'neutral'
+  }
+}%%
+
+block-beta
+block:scope:1
+columns 1
+meta["Meta data"]:1
+block:content["Structured generic content"]:1
+
+space:6
+
+Element:1
+
+end
+archive["Persisted data"]
+end
+
+```
+
+
+A distinction must be made between
 
 * The meta data: Meta data should be as identical as possible for each publication type, and they should be used for both expired (possibly archived) and future publications.
 
