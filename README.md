@@ -152,7 +152,7 @@ The following figure shows the content structure of a publication ([see also XSD
 
 ![Schema](https://amtsblattportal.ch/docs/api/images/publication_schema_overview.png)
 
-Each element has an element key and a term in German or French (a future solution should provide Italian and English as well, see "general terms catalogue"). 
+Each element has an element key and a term in German or French (a future solution should provide Italian and English as well, see "general terms catalog"). 
 The element is also typified by means of a "valueType" element. The following schema excerpt shows the possible elements.
 
 **key:** Contains the key of the term. This uniquely identifies the term, even if the term is renamed on a client-specific basis (for example, a "building application" may be called a "building project", depending on the publication organ).
@@ -188,11 +188,11 @@ These types are mapped in the XML schema, further information on the structure c
 **term:** Describes the publication element with a neutral label in several languages. This label can be defined differently from official gazette to official gazette.
 
 
-### The terms catalogue 
-The collection of general terms (also referred to as the term database) includes all terms that can be used in publication types. These terms are maintained in German, French, Italian and English and have a unique key.
+### The terms catalog 
+The collection of general terms (also referred to as the terms database) includes all terms that can be used in publication types. These terms are maintained in German, French, Italian and English and have a unique key.
 
 **The JSON Structure of a single term object**
-The terms catalogue can currently be accessed in JSON format at the following URL: https://amtsblattportal.ch/terms 
+The terms catalog can currently be accessed in JSON format at the following URL: https://amtsblattportal.ch/terms 
 A term object ("term") contains various information and is structured as follows:
 ```
 {
@@ -212,7 +212,7 @@ A term object ("term") contains various information and is structured as follows
 ### Tenant-specific configurations
 Publishers of an official gazette should be able to configure their publication types autonomously. The exchange of this configuration should also be standardized.
 These configurations include in particular
-  - Assignment and editing of preconfigured default publication types from the terms catalogue
+  - Assignment and editing of preconfigured default publication types from the terms catalog
   - Individualization of publication type naming
   - The possibility to customize the terms of the publication elements by the tenant (n.b.: in the current solution these terms can be edited by publishing entities when creating the publication)
   - A Link to a page with further information on the publication type (description, sample publication, etc.)
