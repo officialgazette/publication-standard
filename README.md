@@ -30,7 +30,6 @@ The most important terms regarding the standardisation can briefly be explained 
 > The information on the actual content of a publication can be found in the publication content.
 >
 > **Publication element:**
-> 
 > A publication type is made up of individual elements. Each notification element has a unique key, but different characteristics.
 > Note: In this context, the term “element” should not be confused with the element term in the XML language. For example, an element can be a “private person” or a “company”.
 > For more information on the structure of an element, see “the content structure” below.
