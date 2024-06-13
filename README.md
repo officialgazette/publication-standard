@@ -184,7 +184,10 @@ The element is also typified by means of a "valueType" element. The following sc
 - attachment
 
 These types are mapped in the XML schema, further information on the structure can be found in the [API doc of the official gazette portal](https://amtsblattportal.ch/docs/api).
-  
+
+**term:** Describes the publication element with a neutral label in several languages. This label can be defined differently from official gazette to official gazette.
+
+
 ### The terms catalogue 
 The collection of general terms (also referred to as the term database) includes all terms that can be used in publication types. These terms are maintained in German, French, Italian and English and have a unique key.
 
