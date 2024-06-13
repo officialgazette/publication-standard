@@ -10,7 +10,7 @@ The future publication standard (occasionally referred to as "Schema 2.0") can b
 >- be scalable (e.g. with regard to the inclusion of new tenants or new publication types)
 >- be developer-friendly
 >
-> see also ["Big Picture > why a standard?"]([https://github.com/officialgazette/big-picture###why_a_standard](https://github.com/officialgazette/big-picture?tab=readme-ov-file#why-a-standard))
+> see also ["Big Picture > why a standard?"](https://github.com/officialgazette/big-picture?tab=readme-ov-file#why-a-standard)
 
 The most important terms regarding the standardisation can briefly be explained as follows:
 
