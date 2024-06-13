@@ -45,8 +45,8 @@ In recent years, various preparatory work has been carried out for the introduct
 
 
 
-## The scope of the Standard
-The field of action with regard to standardization comprises various aspects. The following overview shows Which artifacts are subject to closer consideration regarding for the future standard.
+## The scope of the standardization
+The field of action with regard to standardization comprises various aspects. The following overview shows which artifacts are subject to closer consideration regarding for the future standard.
 
 ```mermaid
 
