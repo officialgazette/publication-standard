@@ -7,7 +7,7 @@ The future publication standard (occasionally referred to as "Schema 2.0") can b
 > [!IMPORTANT]
 > The existing concepts and artifacts should be challenged and revised. An optimal publication standard is to be drafted as part of the public tender.
 >
-> see also [Big Picture > why a standard?](https://github.com/officialgazette/big-picture?tab=readme-ov-file#why-a-standard)
+> See also [Big Picture > why a standard?](https://github.com/officialgazette/big-picture?tab=readme-ov-file#why-a-standard)
 
 The most important terms regarding the standardisation can briefly be explained as follows:
 
