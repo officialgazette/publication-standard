@@ -81,7 +81,7 @@ The individual artifacts are described in the following sections.
 ### The general structure of a publication type
 
 > [!TIP]
-> In the existing solution, the structure schema is available in XSD format, [see here](https://github.com/officialgazette/publication-standard/blob/main/publication_schema.xsd).
+> In the existing solution, the structure schema is available in XSD format, [see here](https://github.com/officialgazette/publication-standard/blob/main/publication_schema.xsd)).
 
 The structure of the publication describes how a publication is organized and can be requested and submitted via the API. 
 
