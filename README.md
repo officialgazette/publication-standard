@@ -6,9 +6,6 @@ The future publication standard (occasionally referred to as "Schema 2.0") can b
 
 > [!IMPORTANT]
 > The existing concepts and artifacts should be challenged and revised. An optimal publication standard is to be drafted as part of the public tender. In particular, it should
->- enable a seamless exchange of publications
->- be scalable (e.g. with regard to the inclusion of new tenants or new publication types)
->- be developer-friendly
 >
 > see also [Big Picture > why a standard?](https://github.com/officialgazette/big-picture?tab=readme-ov-file#why-a-standard)
 
