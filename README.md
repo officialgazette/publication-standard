@@ -191,7 +191,7 @@ These types are mapped in the XML schema, further information on the structure c
 ### The terms catalogue 
 The collection of general terms (also referred to as the term database) includes all terms that can be used in publication types. These terms are maintained in German, French, Italian and English and have a unique key.
 
-**Structure of a term**
+**The JSON Structure of a single term object**
 The terms catalogue can currently be accessed in JSON format at the following URL: https://amtsblattportal.ch/terms 
 A term object ("term") contains various information and is structured as follows:
 ```
