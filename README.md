@@ -5,7 +5,7 @@ The future publication standard (occasionally referred to as "Schema 2.0") can b
 > To get a better understanding of the interaction between the individual artifacts, it is recommended to read ["Big Picture"](https://github.com/officialgazette/big-picture) first.
 
 > [!IMPORTANT]
-> The existing concepts and artifacts should be challenged and revised. An optimal publication standard is to be drafted as part of the public tender. In particular, it should
+> The existing concepts and artifacts should be challenged and revised. An optimal publication standard is to be drafted as part of the public tender.
 >
 > see also [Big Picture > why a standard?](https://github.com/officialgazette/big-picture?tab=readme-ov-file#why-a-standard)
 
