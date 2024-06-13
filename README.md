@@ -27,7 +27,7 @@ The most important terms regarding the standardisation can briefly be explained 
 > The information on the actual content of a publication can be found in the publication content.
 >
 > **Publication element:**
-> A publication type is made up of individual elements. Each notification element has a unique key, but different characteristics.
+> A publication type is made up of individual elements. Each publication element has a unique key, but different characteristics.
 > Note: In this context, the term “element” should not be confused with the element term in the XML language. For example, an element can be a “private person” or a “company”.
 > For more information on the structure of an element, see “the content structure” below.
 
@@ -111,13 +111,13 @@ ${\color{grey}----}$ **Publication scope:** All the aspects described below form
 
 The structure of a publication type (and thus a publication) in its entirety comprises the following aspects
 
-* The publication scope: defines how information in official announcements is structured in general. This is intended to ensure interoperability both across current system boundaries and in temporal terms (compatibility with legacy and future systems).
+* **The publication scope:** defines how information in official announcements is structured in general. This is intended to ensure interoperability both across current system boundaries and in temporal terms (compatibility with legacy and future systems).
 
-* The meta data: Meta data should be as identical as possible for each publication type, and they should be used for both expired (possibly archived) and future publications. The structure and elements of the existing meta data schema is documented [here](https://amtsblattportal.ch/docs/api/#_api_reference). For reasons of downward compatibility, it may be a good approach to keep this structure in a future solution/standardisation.
+* **The meta data:** Meta data should be as identical as possible for each publication type, and they should be used for both expired (possibly archived) and future publications. The structure and elements of the existing meta data schema is documented [here](https://amtsblattportal.ch/docs/api/#_api_reference). For reasons of downward compatibility, it may be a good approach to keep this structure in a future solution/standardisation.
 
-* Structured generic content: Content data varies significantly depending on the type of publication. Therefore, a solution had to be found to keep the basic structure stable but adapt the actual content data for each publication type.
+* **Structured generic content:** Content data varies significantly depending on the type of publication. Therefore, a solution had to be found to keep the basic structure stable but adapt the actual content data for each publication type.
 
-* Persisted publication data in temporary file store
+* **Persisted publication data in temporary publication store:** 
 After the publication deadline has expired, publications are moved to the file store or an external archive.
 
 
