@@ -151,7 +151,7 @@ Describes the possible reactions to a publication
 
 **The generic content structure**
 
-The following figure shows the content structure of a publication:
+The following figure shows the content structure of a publication ([see also XSD](https://github.com/officialgazette/publication-standard/blob/main/publication_schema.xsd).:
 
 ![Schema](https://amtsblattportal.ch/docs/api/images/publication_schema_overview.png)
 
