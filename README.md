@@ -63,8 +63,8 @@ space Terms["Tenant
 specific configuration"]
 space:3
 space space termDB[("
-Term
-Catalogue")]
+Terms
+catalog*")]
 
 end
 
@@ -73,6 +73,8 @@ end
 Terms --> standard
 termDB --> Terms
 ```
+*Note: The terms catalog is primarily a database of all available terms. However, the catalog is publication type-centric structured in order to provide a set of default publication types. 
+
 The individual artifacts are described in the following sections.
 
 ### The general structure of a publication type
